@@ -13,6 +13,10 @@ URL. Never review counts, percentages, store descriptions or images: the
 generator reads only a whitelist of fields and checks the output before it
 writes anything (see FORBIDDEN_PATTERNS).
 
+Hand curation lives in overrides.json (see CONTRIBUTING.md): excluded games,
+pinned games and replacement descriptions are applied on every run, so they
+survive regeneration.
+
 The script fails closed. A missing field, a short section, too many
 templated descriptions or a change bigger than MAX_CHURN aborts the run with
 a non-zero exit and leaves every file untouched.
