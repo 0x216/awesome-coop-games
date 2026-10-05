@@ -4,6 +4,8 @@ A short list of the best co-op games on Steam: 92 games in 7 categories, from on
 
 Maintained by [imho.run](https://imho.run/?utm_source=github), generated weekly from its public data. Not affiliated with Valve.
 
+Want every co-op game, not just the picks? See [ALL-COOP-GAMES.md](ALL-COOP-GAMES.md): all co-op games on Steam with 500+ reviews (CSV/JSON in [data/](data/)).
+
 Each game name opens its Steam store page; "similar games" opens a list of games like it on imho.run. The rules behind every section are in [How this list is built](#how-this-list-is-built).
 
 ## Contents
@@ -155,7 +157,7 @@ _Single-player games that a fan mod turns into co-op. Hand-reviewed by imho.run.
 - Ranking: imho.run's Bayesian-adjusted rating with a junk filter, the same order as its co-op hubs. Each game appears in one section only, the first one it qualifies for in the order above.
 - Descriptions are imho.run's own one-line summaries of what players say about the game. Where there is none yet, the line lists the game's top player tags instead. Nothing is copied from the Steam store.
 - No review counts, percentages, store text or images are published here.
-- The machine-readable version of this list is [`data/list.json`](data/list.json).
+- The machine-readable version of this list is [`data/list.json`](data/list.json). The full co-op list behind it is [ALL-COOP-GAMES.md](ALL-COOP-GAMES.md).
 
 ## Contributing
 
