@@ -639,16 +639,16 @@ def anchor(title: str) -> str:
 
 def entry_line(e: Entry) -> str:
     g = e.game
-    name = f"**[{md_escape(g.name)}]({imho_link(g)})**"
+    # The game name opens its Steam store page (what a reader of a game list
+    # expects); imho.run is only the secondary "similar games" link.
+    name = f"**[{md_escape(g.name)}]({steam_link(g.appid)})**"
+    similar = f"[similar games]({imho_link(g)})"
     if e.mod:
         maturity = " (beta)" if e.mod.get("maturity") == "beta" else ""
         mod = f"[{md_escape(str(e.mod['mod_name']))}]({e.mod['mod_url']}){maturity}"
-        return f"- {name} · {mod} — {md_escape(e.description)} · [Steam]({steam_link(g.appid)})"
+        return f"- {name} · {mod} — {md_escape(e.description)} · {similar}"
     year = f" ({g.year})" if g.year else ""
-    return (
-        f"- {name}{year} · {mode_label(g)} — {md_escape(e.description)}"
-        f" · [Steam]({steam_link(g.appid)})"
-    )
+    return f"- {name}{year} · {mode_label(g)} — {md_escape(e.description)} · {similar}"
 
 
 def section_title(s: Section, meta: dict[str, Any]) -> str:
@@ -667,8 +667,8 @@ def render(sections: dict[str, list[Entry]], meta: dict[str, Any], today: str) -
         "Maintained by [imho.run](https://imho.run/?utm_source=github), generated weekly from "
         "its public data. Not affiliated with Valve.",
         "",
-        "Each game links to its imho.run page (similar games, co-op details) and to its Steam "
-        "store page. The rules behind every section are in "
+        "Each game name opens its Steam store page; \"similar games\" opens a list of games "
+        "like it on imho.run. The rules behind every section are in "
         "[How this list is built](#how-this-list-is-built).",
         "",
         "## Contents",
