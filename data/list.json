@@ -3,7 +3,7 @@
  "source": "https://imho.run",
  "license": "https://creativecommons.org/licenses/by/4.0/",
  "attribution": "imho.run (https://imho.run)",
- "input_hash": "0a0a6fd1f88526c7",
+ "input_hash": "acb8918a4308b041",
  "sections": [
   {
    "id": "best-of-year",
@@ -503,7 +503,7 @@
     {
      "appid": 2215200,
      "name": "LEGO® Batman™: Legacy of the Dark Knight",
-     "imho_url": "https://imho.run/games/2215200/lego-batmantm-legacy-of-the-dark-knight?utm_source=github",
+     "imho_url": "https://imho.run/games/2215200/lego-batman-legacy-of-the-dark-knight?utm_source=github",
      "steam_url": "https://store.steampowered.com/app/2215200/",
      "year": 2026,
      "mode": "local",
@@ -575,7 +575,7 @@
     {
      "appid": 394510,
      "name": "HELLDIVERS™ Dive Harder Edition",
-     "imho_url": "https://imho.run/games/394510/helldiverstm-dive-harder-edition?utm_source=github",
+     "imho_url": "https://imho.run/games/394510/helldivers-dive-harder-edition?utm_source=github",
      "steam_url": "https://store.steampowered.com/app/394510/",
      "year": 2015,
      "mode": "online+local",

@@ -272,10 +272,12 @@ def pick(obj: dict[str, Any], fields: tuple[str, ...], what: str) -> dict[str, A
 
 
 def slugify(name: str) -> str:
-    """Mirror of imho.run's slugifyGameName, so links land without a redirect."""
+    """Mirror of imho.run's slugifyGameName (frontend/src/lib/site.ts), so links
+    land without a redirect. Order matters: lowercase first, then NFKD, so "™"
+    becomes an uppercase "TM" that the [^a-z0-9] filter drops, as on the site."""
     if not name:
         return "game"
-    s = unicodedata.normalize("NFKD", name).lower()
+    s = unicodedata.normalize("NFKD", name.lower())
     s = "".join(c for c in s if not unicodedata.combining(c))
     for ch in ("™", "®", "©"):
         s = s.replace(ch, "")
@@ -286,8 +288,9 @@ def slugify(name: str) -> str:
 
 
 def imho_link(game: Game) -> str:
-    url = game.imho_url or f"{SITE}/games/{game.appid}/{slugify(game.name)}"
-    return f"{url}{'&' if '?' in url else '?'}{UTM}"
+    # Built here rather than taken from the datasets' imho_url: the site's own
+    # slug rule is the canonical one, and a different slug costs a redirect.
+    return f"{SITE}/games/{game.appid}/{slugify(game.name)}?{UTM}"
 
 
 def steam_link(appid: int) -> str:
@@ -810,7 +813,12 @@ def diff_against_previous(
 
 def write_taglines(taglines: dict[str, Facts]) -> None:
     ordered = dict(sorted(taglines.items(), key=lambda kv: int(kv[0])))
-    TAGLINES.write_text(json.dumps(ordered, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    write_lf(TAGLINES, json.dumps(ordered, ensure_ascii=False, indent=1) + "\n")
+
+
+def write_lf(path: Path, text: str) -> None:
+    """UTF-8 with LF line endings on every OS, so local and CI runs match."""
+    path.write_text(text, encoding="utf-8", newline="\n")
 
 
 def days_since(day: str | None) -> int:
@@ -925,8 +933,8 @@ def run(force: bool, tagline_budget: int, prefetch: int) -> int:
             if sections.get(s.id)
         ],
     }
-    LIST_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    README.write_text(readme, encoding="utf-8")
+    write_lf(LIST_JSON, json.dumps(payload, ensure_ascii=False, indent=1) + "\n")
+    write_lf(README, readme)
     print("  README.md and data/list.json written.")
     return 0
 
