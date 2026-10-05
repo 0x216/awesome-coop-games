@@ -7,6 +7,7 @@
 - **Reviews** is a bucket (500+, 1k+, 5k+, 20k+), not a review count.
 - **Game** opens the Steam store page; **Similar** opens games like it on imho.run.
 - The same rows as data: [CSV](data/all-coop-games.csv) · [JSON](data/all-coop-games.json).
+- **No review floor:** every co-op game imho.run classifies, as [CSV](data/all-coop-games-no-floor.csv) · [JSON](data/all-coop-games-no-floor.json) only, too long for a table here ([dataset page](https://imho.run/datasets/steam-coop-games-all?utm_source=github)).
 - **License:** [CC BY 4.0](LICENSE-DATA); credit imho.run (https://imho.run) when you reuse it. Game names are their owners' trademarks. Not affiliated with Valve.
 - Regenerated weekly from imho.run's [public dataset](https://imho.run/datasets/steam-coop-games-by-mode?utm_source=github) by [`generate.py`](generate.py). Last generated: 2026-10-05.
 
