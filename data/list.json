@@ -1,0 +1,985 @@
+{
+ "generated_at": "2026-10-05",
+ "source": "https://imho.run",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "attribution": "imho.run (https://imho.run)",
+ "input_hash": "fc884b57672080c6",
+ "sections": [
+  {
+   "id": "best-of-year",
+   "title": "Best co-op games of 2026",
+   "appids": [
+    3618030,
+    1478500,
+    4656000,
+    4001890,
+    4069520,
+    2918310,
+    3904850,
+    3583210,
+    4380490,
+    3683770
+   ],
+   "games": [
+    {
+     "appid": 3618030,
+     "name": "Flock Around",
+     "imho_url": "https://imho.run/games/3618030/flock-around?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/3618030/",
+     "year": 2026,
+     "mode": "online",
+     "description": "Co-op bird-watching and photography game with shiny hunting"
+    },
+    {
+     "appid": 1478500,
+     "name": "Big Walk",
+     "imho_url": "https://imho.run/games/1478500/big-walk?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1478500/",
+     "year": 2026,
+     "mode": "online",
+     "description": "Co-op island exploration and puzzle-solving with friends"
+    },
+    {
+     "appid": 4656000,
+     "name": "BOMBANANA!",
+     "imho_url": "https://imho.run/games/4656000/bombanana?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/4656000/",
+     "year": 2026,
+     "mode": "online",
+     "description": "Co-op bomb defusal puzzle with three monkeys who can't see, hear, or speak"
+    },
+    {
+     "appid": 4001890,
+     "name": "How to Fish",
+     "imho_url": "https://imho.run/games/4001890/how-to-fish?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/4001890/",
+     "year": 2026,
+     "mode": "online",
+     "description": "Chaotic fishing-shooter party game with friends, blow up fish with guns"
+    },
+    {
+     "appid": 4069520,
+     "name": "Super Battle Golf",
+     "imho_url": "https://imho.run/games/4069520/super-battle-golf?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/4069520/",
+     "year": 2026,
+     "mode": "online",
+     "description": "Chaotic multiplayer golf with weapons and items, party game for friends"
+    },
+    {
+     "appid": 2918310,
+     "name": "Mama's Sleeping Angels",
+     "imho_url": "https://imho.run/games/2918310/mama-s-sleeping-angels?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/2918310/",
+     "year": 2026,
+     "mode": "online",
+     "description": "Co-op extraction horror with kissing healing and cursed artifacts"
+    },
+    {
+     "appid": 3904850,
+     "name": "Approximately Up",
+     "imho_url": "https://imho.run/games/3904850/approximately-up?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/3904850/",
+     "year": 2026,
+     "mode": "online",
+     "description": "Build and fly custom spacecraft across a solar system"
+    },
+    {
+     "appid": 3583210,
+     "name": "Crashout Crew",
+     "imho_url": "https://imho.run/games/3583210/crashout-crew?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/3583210/",
+     "year": 2026,
+     "mode": "online",
+     "description": "Driving, Arcade, Character Customization"
+    },
+    {
+     "appid": 4380490,
+     "name": "Cat Mail Co.",
+     "imho_url": "https://imho.run/games/4380490/cat-mail-co?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/4380490/",
+     "year": 2026,
+     "mode": "online",
+     "description": "Cozy cat post office sorting and delivery simulation"
+    },
+    {
+     "appid": 3683770,
+     "name": "Boba Cafe Simulator",
+     "imho_url": "https://imho.run/games/3683770/boba-cafe-simulator?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/3683770/",
+     "year": 2026,
+     "mode": "online",
+     "description": "Cafe management sim with drink-making and NPC friendships"
+    }
+   ]
+  },
+  {
+   "id": "online",
+   "title": "Online co-op",
+   "appids": [
+    413150,
+    620,
+    1794680,
+    105600,
+    3164500,
+    427520,
+    548430,
+    550,
+    1966720,
+    4000,
+    960090,
+    526870,
+    227300,
+    1086940,
+    270880,
+    3241660,
+    739630,
+    3146520,
+    1290000,
+    3527290
+   ],
+   "games": [
+    {
+     "appid": 413150,
+     "name": "Stardew Valley",
+     "imho_url": "https://imho.run/games/413150/stardew-valley?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/413150/",
+     "year": 2016,
+     "mode": "online+local",
+     "description": "Cozy farming life-simulation RPG with endless content"
+    },
+    {
+     "appid": 620,
+     "name": "Portal 2",
+     "imho_url": "https://imho.run/games/620/portal-2?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/620/",
+     "year": 2011,
+     "mode": "online+local",
+     "description": "First-person puzzle game, portals, witty AI antagonists"
+    },
+    {
+     "appid": 1794680,
+     "name": "Vampire Survivors",
+     "imho_url": "https://imho.run/games/1794680/vampire-survivors?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1794680/",
+     "year": 2022,
+     "mode": "online",
+     "description": "Action Roguelike, Bullet Hell, Pixel Graphics"
+    },
+    {
+     "appid": 105600,
+     "name": "Terraria",
+     "imho_url": "https://imho.run/games/105600/terraria?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/105600/",
+     "year": 2011,
+     "mode": "online",
+     "description": "2D sandbox action-adventure with boss progression and crafting"
+    },
+    {
+     "appid": 3164500,
+     "name": "Schedule I",
+     "imho_url": "https://imho.run/games/3164500/schedule-i?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/3164500/",
+     "year": 2025,
+     "mode": "online",
+     "description": "Simulation, Crime, Open World"
+    },
+    {
+     "appid": 427520,
+     "name": "Factorio",
+     "imho_url": "https://imho.run/games/427520/factorio?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/427520/",
+     "year": 2020,
+     "mode": "online",
+     "description": "Automation, Base-Building, Resource Management"
+    },
+    {
+     "appid": 548430,
+     "name": "Deep Rock Galactic",
+     "imho_url": "https://imho.run/games/548430/deep-rock-galactic?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/548430/",
+     "year": 2020,
+     "mode": "online",
+     "description": "First-person co-op mining shooter with 4 classes and procedural caves"
+    },
+    {
+     "appid": 550,
+     "name": "Left 4 Dead 2",
+     "imho_url": "https://imho.run/games/550/left-4-dead-2?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/550/",
+     "year": 2009,
+     "mode": "online",
+     "description": "Co-op zombie shooter with horde waves and versus mode"
+    },
+    {
+     "appid": 1966720,
+     "name": "Lethal Company",
+     "imho_url": "https://imho.run/games/1966720/lethal-company?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1966720/",
+     "year": 2023,
+     "mode": "online",
+     "description": "Horror, First-Person, Survival Horror"
+    },
+    {
+     "appid": 4000,
+     "name": "Garry's Mod",
+     "imho_url": "https://imho.run/games/4000/garry-s-mod?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/4000/",
+     "year": 2006,
+     "mode": "online",
+     "description": "Sandbox playground with endless Steam Workshop content"
+    },
+    {
+     "appid": 960090,
+     "name": "Bloons TD 6",
+     "imho_url": "https://imho.run/games/960090/bloons-td-6?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/960090/",
+     "year": 2018,
+     "mode": "online",
+     "description": "Tower defense game with monkeys popping colorful balloons"
+    },
+    {
+     "appid": 526870,
+     "name": "Satisfactory",
+     "imho_url": "https://imho.run/games/526870/satisfactory?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/526870/",
+     "year": 2024,
+     "mode": "online",
+     "description": "Base-Building, Automation, Open World"
+    },
+    {
+     "appid": 227300,
+     "name": "Euro Truck Simulator 2",
+     "imho_url": "https://imho.run/games/227300/euro-truck-simulator-2?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/227300/",
+     "year": 2012,
+     "mode": "online",
+     "description": "Relaxing truck driving simulation with company management"
+    },
+    {
+     "appid": 1086940,
+     "name": "Baldur's Gate 3",
+     "imho_url": "https://imho.run/games/1086940/baldur-s-gate-3?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1086940/",
+     "year": 2023,
+     "mode": "online",
+     "description": "Turn-based CRPG with D&D 5e rules and branching story"
+    },
+    {
+     "appid": 270880,
+     "name": "American Truck Simulator",
+     "imho_url": "https://imho.run/games/270880/american-truck-simulator?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/270880/",
+     "year": 2016,
+     "mode": "online",
+     "description": "Automobile Sim, Driving, Open World"
+    },
+    {
+     "appid": 3241660,
+     "name": "R.E.P.O.",
+     "imho_url": "https://imho.run/games/3241660/r-e-p-o?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/3241660/",
+     "year": 2025,
+     "mode": "online",
+     "description": "Co-op horror extraction game, carry loot and escape with friends"
+    },
+    {
+     "appid": 739630,
+     "name": "Phasmophobia",
+     "imho_url": "https://imho.run/games/739630/phasmophobia?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/739630/",
+     "year": 2020,
+     "mode": "online",
+     "description": "First-person ghost hunting with co-op investigation"
+    },
+    {
+     "appid": 3146520,
+     "name": "WEBFISHING",
+     "imho_url": "https://imho.run/games/3146520/webfishing?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/3146520/",
+     "year": 2024,
+     "mode": "online",
+     "description": "Fishing, Cute, Character Customization"
+    },
+    {
+     "appid": 1290000,
+     "name": "PowerWash Simulator",
+     "imho_url": "https://imho.run/games/1290000/powerwash-simulator?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1290000/",
+     "year": 2022,
+     "mode": "online",
+     "description": "Relaxing, Simulation, First-Person"
+    },
+    {
+     "appid": 3527290,
+     "name": "PEAK",
+     "imho_url": "https://imho.run/games/3527290/peak?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/3527290/",
+     "year": 2025,
+     "mode": "online",
+     "description": "Physics, Exploration, First-Person"
+    }
+   ]
+  },
+  {
+   "id": "couch",
+   "title": "Couch and split-screen co-op",
+   "appids": [
+    204360,
+    253230,
+    268910,
+    435150,
+    1426210,
+    1942280,
+    108600,
+    238460,
+    286160,
+    2001120,
+    477160,
+    274190,
+    1211020,
+    2280,
+    531510,
+    1337520,
+    1599600,
+    2215200,
+    341800,
+    774181
+   ],
+   "games": [
+    {
+     "appid": 204360,
+     "name": "Castle Crashers®",
+     "imho_url": "https://imho.run/games/204360/castle-crashers?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/204360/",
+     "year": 2012,
+     "mode": "online+local",
+     "description": "2D, Beat 'em up, Hack and Slash"
+    },
+    {
+     "appid": 253230,
+     "name": "A Hat in Time",
+     "imho_url": "https://imho.run/games/253230/a-hat-in-time?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/253230/",
+     "year": 2017,
+     "mode": "local",
+     "description": "Cute, 3D Platformer, Collectathon"
+    },
+    {
+     "appid": 268910,
+     "name": "Cuphead",
+     "imho_url": "https://imho.run/games/268910/cuphead?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/268910/",
+     "year": 2017,
+     "mode": "local",
+     "description": "Difficult, Cartoon, Platformer"
+    },
+    {
+     "appid": 435150,
+     "name": "Divinity: Original Sin 2 - Definitive Edition",
+     "imho_url": "https://imho.run/games/435150/divinity-original-sin-2-definitive-edition?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/435150/",
+     "year": 2017,
+     "mode": "online+local",
+     "description": "Tactical RPG, RPG, Turn-Based Strategy"
+    },
+    {
+     "appid": 1426210,
+     "name": "It Takes Two",
+     "imho_url": "https://imho.run/games/1426210/it-takes-two?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1426210/",
+     "year": 2021,
+     "mode": "online+local",
+     "description": "Puzzle, Story Rich"
+    },
+    {
+     "appid": 1942280,
+     "name": "Brotato",
+     "imho_url": "https://imho.run/games/1942280/brotato?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1942280/",
+     "year": 2023,
+     "mode": "local",
+     "description": "Rogue-like, Action Roguelike, Bullet Hell"
+    },
+    {
+     "appid": 108600,
+     "name": "Project Zomboid",
+     "imho_url": "https://imho.run/games/108600/project-zomboid?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/108600/",
+     "year": 2013,
+     "mode": "online+local",
+     "description": "Isometric zombie survival sandbox with permadeath"
+    },
+    {
+     "appid": 238460,
+     "name": "BattleBlock Theater®",
+     "imho_url": "https://imho.run/games/238460/battleblock-theater?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/238460/",
+     "year": 2014,
+     "mode": "online+local",
+     "description": "Platformer, Funny, Comedy"
+    },
+    {
+     "appid": 286160,
+     "name": "Tabletop Simulator",
+     "imho_url": "https://imho.run/games/286160/tabletop-simulator?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/286160/",
+     "year": 2015,
+     "mode": "online+local",
+     "description": "Tabletop, Board Game, Simulation"
+    },
+    {
+     "appid": 2001120,
+     "name": "Split Fiction",
+     "imho_url": "https://imho.run/games/2001120/split-fiction?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/2001120/",
+     "year": 2025,
+     "mode": "online+local",
+     "description": "Female Protagonist, Action-Adventure, 3D Platformer"
+    },
+    {
+     "appid": 477160,
+     "name": "Human Fall Flat",
+     "imho_url": "https://imho.run/games/477160/human-fall-flat?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/477160/",
+     "year": 2016,
+     "mode": "local",
+     "description": "Funny, Puzzle, Physics"
+    },
+    {
+     "appid": 274190,
+     "name": "Broforce",
+     "imho_url": "https://imho.run/games/274190/broforce?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/274190/",
+     "year": 2015,
+     "mode": "online+local",
+     "description": "America, Pixel Graphics, 2D"
+    },
+    {
+     "appid": 1211020,
+     "name": "Wobbly Life",
+     "imho_url": "https://imho.run/games/1211020/wobbly-life?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1211020/",
+     "year": 2025,
+     "mode": "online+local",
+     "description": "Open-world life sim, jobs and exploration, local co-op up to 4"
+    },
+    {
+     "appid": 2280,
+     "name": "DOOM + DOOM II",
+     "imho_url": "https://imho.run/games/2280/doom-doom-ii?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/2280/",
+     "year": 2007,
+     "mode": "online+local",
+     "description": "Fast-paced retro FPS, shoot demons in tight corridors"
+    },
+    {
+     "appid": 531510,
+     "name": "Just Shapes & Beats",
+     "imho_url": "https://imho.run/games/531510/just-shapes-beats?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/531510/",
+     "year": 2018,
+     "mode": "online+local",
+     "description": "Bullet-hell rhythm game where you dodge obstacles synced to music"
+    },
+    {
+     "appid": 1337520,
+     "name": "Risk of Rain Returns",
+     "imho_url": "https://imho.run/games/1337520/risk-of-rain-returns?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1337520/",
+     "year": 2023,
+     "mode": "online+local",
+     "description": "2D roguelike platformer, survive and grow overpowered"
+    },
+    {
+     "appid": 1599600,
+     "name": "PlateUp!",
+     "imho_url": "https://imho.run/games/1599600/plateup?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1599600/",
+     "year": 2022,
+     "mode": "online+local",
+     "description": "Kitchen chaos roguelite with automation and co-op cooking"
+    },
+    {
+     "appid": 2215200,
+     "name": "LEGO® Batman™: Legacy of the Dark Knight",
+     "imho_url": "https://imho.run/games/2215200/lego-batmantm-legacy-of-the-dark-knight?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/2215200/",
+     "year": 2026,
+     "mode": "local",
+     "description": "Open-world Batman action with Arkham-style combat and LEGO charm"
+    },
+    {
+     "appid": 341800,
+     "name": "Keep Talking and Nobody Explodes",
+     "imho_url": "https://imho.run/games/341800/keep-talking-and-nobody-explodes?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/341800/",
+     "year": 2015,
+     "mode": "local",
+     "description": "Co-op bomb defusal puzzle, one reader one defuser"
+    },
+    {
+     "appid": 774181,
+     "name": "Rhythm Doctor",
+     "imho_url": "https://imho.run/games/774181/rhythm-doctor?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/774181/",
+     "year": 2025,
+     "mode": "local",
+     "description": "One-button rhythm game with evolving patterns and emotional story"
+    }
+   ]
+  },
+  {
+   "id": "couch-4",
+   "title": "4-player couch co-op",
+   "appids": [
+    728880,
+    418530,
+    332570,
+    394510,
+    371970,
+    1016920,
+    448510,
+    375480,
+    230270,
+    523660
+   ],
+   "games": [
+    {
+     "appid": 728880,
+     "name": "Overcooked! 2",
+     "imho_url": "https://imho.run/games/728880/overcooked-2?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/728880/",
+     "year": 2018,
+     "mode": "online+local",
+     "description": "Cooking, Funny"
+    },
+    {
+     "appid": 418530,
+     "name": "Spelunky 2",
+     "imho_url": "https://imho.run/games/418530/spelunky-2?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/418530/",
+     "year": 2020,
+     "mode": "online+local",
+     "description": "Roguelike platformer with permadeath and online co-op"
+    },
+    {
+     "appid": 332570,
+     "name": "Amazing Frog?",
+     "imho_url": "https://imho.run/games/332570/amazing-frog?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/332570/",
+     "year": 2014,
+     "mode": "local",
+     "description": "Open-world sandbox with a frog protagonist, jetpacks, and chaotic humor"
+    },
+    {
+     "appid": 394510,
+     "name": "HELLDIVERS™ Dive Harder Edition",
+     "imho_url": "https://imho.run/games/394510/helldiverstm-dive-harder-edition?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/394510/",
+     "year": 2015,
+     "mode": "online+local",
+     "description": "Top-down twin-stick horde shooter with co-op chaos and stratagem call-ins"
+    },
+    {
+     "appid": 371970,
+     "name": "Barony",
+     "imho_url": "https://imho.run/games/371970/barony?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/371970/",
+     "year": 2015,
+     "mode": "online+local",
+     "description": "Co-op roguelike dungeon crawler with permadeath and punishing difficulty"
+    },
+    {
+     "appid": 1016920,
+     "name": "Unrailed!",
+     "imho_url": "https://imho.run/games/1016920/unrailed?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1016920/",
+     "year": 2020,
+     "mode": "online+local",
+     "description": "Co-op train-building chaos, keep the locomotive moving"
+    },
+    {
+     "appid": 448510,
+     "name": "Overcooked",
+     "imho_url": "https://imho.run/games/448510/overcooked?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/448510/",
+     "year": 2016,
+     "mode": "local",
+     "description": "Local co-op cooking chaos, teamwork required"
+    },
+    {
+     "appid": 375480,
+     "name": "Chronicon",
+     "imho_url": "https://imho.run/games/375480/chronicon?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/375480/",
+     "year": 2020,
+     "mode": "local",
+     "description": "Pixel-art ARPG with endless endgame and deep build variety"
+    },
+    {
+     "appid": 230270,
+     "name": "N++ (NPLUSPLUS)",
+     "imho_url": "https://imho.run/games/230270/n-nplusplus?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/230270/",
+     "year": 2016,
+     "mode": "local",
+     "description": "Hard precision platformer with thousands of levels"
+    },
+    {
+     "appid": 523660,
+     "name": "HYPERCHARGE: Unboxed",
+     "imho_url": "https://imho.run/games/523660/hypercharge-unboxed?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/523660/",
+     "year": 2020,
+     "mode": "online+local",
+     "description": "Tower defense FPS with toy soldier heroes in a living bedroom"
+    }
+   ]
+  },
+  {
+   "id": "horror",
+   "title": "Co-op horror",
+   "appids": [
+    242760,
+    239140,
+    602960,
+    1304930,
+    1250,
+    2881650,
+    500,
+    1962700,
+    434570,
+    1943950
+   ],
+   "games": [
+    {
+     "appid": 242760,
+     "name": "The Forest",
+     "imho_url": "https://imho.run/games/242760/the-forest?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/242760/",
+     "year": 2018,
+     "mode": "online",
+     "description": "Open-world survival horror with deep crafting and smart AI enemies"
+    },
+    {
+     "appid": 239140,
+     "name": "Dying Light",
+     "imho_url": "https://imho.run/games/239140/dying-light?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/239140/",
+     "year": 2015,
+     "mode": "online",
+     "description": "Open-world zombie survival with fluid parkour and night horror"
+    },
+    {
+     "appid": 602960,
+     "name": "Barotrauma",
+     "imho_url": "https://imho.run/games/602960/barotrauma?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/602960/",
+     "year": 2023,
+     "mode": "online",
+     "description": "Survival, Submarine, Survival Horror"
+    },
+    {
+     "appid": 1304930,
+     "name": "The Outlast Trials",
+     "imho_url": "https://imho.run/games/1304930/the-outlast-trials?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1304930/",
+     "year": 2024,
+     "mode": "online",
+     "description": "Horror, Survival Horror, Psychological Horror"
+    },
+    {
+     "appid": 1250,
+     "name": "Killing Floor",
+     "imho_url": "https://imho.run/games/1250/killing-floor?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1250/",
+     "year": 2009,
+     "mode": "online",
+     "description": "FPS, Zombies, Survival"
+    },
+    {
+     "appid": 2881650,
+     "name": "Content Warning",
+     "imho_url": "https://imho.run/games/2881650/content-warning?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/2881650/",
+     "year": 2024,
+     "mode": "online",
+     "description": "Horror, Funny, First-Person"
+    },
+    {
+     "appid": 500,
+     "name": "Left 4 Dead",
+     "imho_url": "https://imho.run/games/500/left-4-dead?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/500/",
+     "year": 2008,
+     "mode": "online",
+     "description": "Zombies, FPS, Horror"
+    },
+    {
+     "appid": 1962700,
+     "name": "Subnautica 2",
+     "imho_url": "https://imho.run/games/1962700/subnautica-2?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1962700/",
+     "year": 2026,
+     "mode": "online",
+     "description": "Underwater survival exploration with base-building, early access"
+    },
+    {
+     "appid": 434570,
+     "name": "Blood and Bacon",
+     "imho_url": "https://imho.run/games/434570/blood-and-bacon?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/434570/",
+     "year": 2016,
+     "mode": "online",
+     "description": "Wave-based mutant pig shooter with co-op and dark humor"
+    },
+    {
+     "appid": 1943950,
+     "name": "Escape the Backrooms",
+     "imho_url": "https://imho.run/games/1943950/escape-the-backrooms?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1943950/",
+     "year": 2025,
+     "mode": "online",
+     "description": "Horror, Psychological Horror, Survival Horror"
+    }
+   ]
+  },
+  {
+   "id": "free",
+   "title": "Free-to-play co-op",
+   "appids": [
+    1625450,
+    2709570,
+    230410,
+    225840,
+    630,
+    2551020,
+    224260,
+    2707930,
+    1977530,
+    223710
+   ],
+   "games": [
+    {
+     "appid": 1625450,
+     "name": "Muck",
+     "imho_url": "https://imho.run/games/1625450/muck?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1625450/",
+     "year": 2021,
+     "mode": "online",
+     "description": "Survival roguelike with crafting, permadeath, and co-op"
+    },
+    {
+     "appid": 2709570,
+     "name": "Supermarket Together",
+     "imho_url": "https://imho.run/games/2709570/supermarket-together?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/2709570/",
+     "year": 2024,
+     "mode": "online",
+     "description": "Co-op supermarket management sim, grow from worker to store manager"
+    },
+    {
+     "appid": 230410,
+     "name": "Warframe",
+     "imho_url": "https://imho.run/games/230410/warframe?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/230410/",
+     "year": 2013,
+     "mode": "online",
+     "description": "Free-to-play online ninja action with deep customization"
+    },
+    {
+     "appid": 225840,
+     "name": "Sven Co-op",
+     "imho_url": "https://imho.run/games/225840/sven-co-op?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/225840/",
+     "year": 2016,
+     "mode": "online",
+     "description": "Free multiplayer Half-Life 1 co-op with custom maps"
+    },
+    {
+     "appid": 630,
+     "name": "Alien Swarm",
+     "imho_url": "https://imho.run/games/630/alien-swarm?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/630/",
+     "year": 2010,
+     "mode": "online",
+     "description": "Top-down cooperative shooter, marine squad vs alien bugs"
+    },
+    {
+     "appid": 2551020,
+     "name": "One-armed robber",
+     "imho_url": "https://imho.run/games/2551020/one-armed-robber?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/2551020/",
+     "year": 2023,
+     "mode": "online",
+     "description": "Co-op heist game with stealth and shooting against police"
+    },
+    {
+     "appid": 224260,
+     "name": "No More Room in Hell",
+     "imho_url": "https://imho.run/games/224260/no-more-room-in-hell?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/224260/",
+     "year": 2013,
+     "mode": "online",
+     "description": "Realistic first-person zombie survival shooter with teamwork"
+    },
+    {
+     "appid": 2707930,
+     "name": "Palia",
+     "imho_url": "https://imho.run/games/2707930/palia?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/2707930/",
+     "year": 2024,
+     "mode": "online",
+     "description": "Free-to-play cozy life sim MMO with farming and decorating"
+    },
+    {
+     "appid": 1977530,
+     "name": "One-armed cook",
+     "imho_url": "https://imho.run/games/1977530/one-armed-cook?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1977530/",
+     "year": 2022,
+     "mode": "online",
+     "description": "Chaotic multiplayer cooking with one-armed controls"
+    },
+    {
+     "appid": 223710,
+     "name": "Cry of Fear",
+     "imho_url": "https://imho.run/games/223710/cry-of-fear?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/223710/",
+     "year": 2013,
+     "mode": "online",
+     "description": "Psychological horror FPS with survival and co-op"
+    }
+   ]
+  },
+  {
+   "id": "mods",
+   "title": "Co-op via mods",
+   "appids": [
+    1245620,
+    489830,
+    294100,
+    22320,
+    264710,
+    753640,
+    1366540,
+    646570,
+    881100,
+    1030300,
+    220200,
+    284160
+   ],
+   "games": [
+    {
+     "appid": 1245620,
+     "name": "ELDEN RING",
+     "imho_url": "https://imho.run/games/1245620/elden-ring?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1245620/",
+     "year": null,
+     "mode": null,
+     "description": "Replaces summons with a lasting session: you and up to three friends play the whole game together, with no resummoning after every boss or death"
+    },
+    {
+     "appid": 489830,
+     "name": "The Elder Scrolls V: Skyrim Special Edition",
+     "imho_url": "https://imho.run/games/489830/the-elder-scrolls-v-skyrim-special-edition?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/489830/",
+     "year": null,
+     "mode": null,
+     "description": "Explore Skyrim as a group. Quest progress follows the party leader, who does the talking with NPCs. Keep your other mods few: they are not guaranteed to sync"
+    },
+    {
+     "appid": 294100,
+     "name": "RimWorld",
+     "imho_url": "https://imho.run/games/294100/rimworld?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/294100/",
+     "year": null,
+     "mode": null,
+     "description": "Everyone runs the same colony at the same time, kept in sync on every machine. Other mods you add have to support it"
+    },
+    {
+     "appid": 22320,
+     "name": "The Elder Scrolls III: Morrowind® Game of the Year Edition",
+     "imho_url": "https://imho.run/games/22320/the-elder-scrolls-iii-morrowind-game-of-the-year-edition?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/22320/",
+     "year": null,
+     "mode": null,
+     "description": "Multiplayer on OpenMW, the open-source Morrowind engine. Quests and the world state are shared on a server that you or a friend host. You need the original game files"
+    },
+    {
+     "appid": 264710,
+     "name": "Subnautica",
+     "imho_url": "https://imho.run/games/264710/subnautica?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/264710/",
+     "year": null,
+     "mode": null,
+     "description": "Open-source multiplayer: build bases and follow the story together in one shared ocean. Download it from the project page only, never from mirror sites"
+    },
+    {
+     "appid": 753640,
+     "name": "Outer Wilds",
+     "imho_url": "https://imho.run/games/753640/outer-wilds?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/753640/",
+     "year": null,
+     "mode": null,
+     "description": "Each player flies their own ship through the same solar system; the time loop and what you find out are shared. Installed with the Outer Wilds Mod Manager"
+    },
+    {
+     "appid": 1366540,
+     "name": "Dyson Sphere Program",
+     "imho_url": "https://imho.run/games/1366540/dyson-sphere-program?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1366540/",
+     "year": null,
+     "mode": null,
+     "description": "Grow one factory across the star cluster together, each player in their own mecha. Installed from Thunderstore with a mod manager"
+    },
+    {
+     "appid": 646570,
+     "name": "Slay the Spire",
+     "imho_url": "https://imho.run/games/646570/slay-the-spire?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/646570/",
+     "year": null,
+     "mode": null,
+     "description": "Climb the Spire as a party: everyone plays their own deck, and the fights are shared. Subscribe on the Steam Workshop"
+    },
+    {
+     "appid": 881100,
+     "name": "Noita",
+     "imho_url": "https://imho.run/games/881100/noita?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/881100/",
+     "year": null,
+     "mode": null,
+     "description": "Real co-op in one shared world: the same pixels burn, flood and blow up for every player"
+    },
+    {
+     "appid": 1030300,
+     "name": "Hollow Knight: Silksong",
+     "imho_url": "https://imho.run/games/1030300/hollow-knight-silksong?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/1030300/",
+     "year": null,
+     "mode": null,
+     "description": "Join friends through Steam invites and explore Pharloom together; enemies sync through an add-on. An early release, so expect rough edges"
+    },
+    {
+     "appid": 220200,
+     "name": "Kerbal Space Program",
+     "imho_url": "https://imho.run/games/220200/kerbal-space-program?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/220200/",
+     "year": null,
+     "mode": null,
+     "description": "A shared server where everyone flies their own missions in one universe, career mode included. A sandbox to share, not a guided co-op story"
+    },
+    {
+     "appid": 284160,
+     "name": "BeamNG.drive",
+     "imho_url": "https://imho.run/games/284160/beamng-drive?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/284160/",
+     "year": null,
+     "mode": null,
+     "description": "Drive the same maps with friends on servers you join or host: free roam, races and events. A sandbox, not a co-op campaign"
+    }
+   ]
+  }
+ ]
+}
