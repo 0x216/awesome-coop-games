@@ -1,11 +1,23 @@
 #!/usr/bin/env python3
-"""Regenerate README.md from imho.run's public co-op data.
+"""Regenerate README.md and the full co-op lists from imho.run's public co-op data.
 
 Python 3.12+, standard library only. Run from the repository root:
 
     python generate.py            # weekly regeneration (what the workflow runs)
     python generate.py --force    # also allow a change bigger than the diff guard
-    python generate.py --check    # offline: validate overrides.json and README.md
+    python generate.py --check    # offline: validate overrides.json and the outputs
+
+Outputs:
+    README.md, data/list.json          the hand-checked short list (~90 games)
+    ALL-COOP-GAMES.md,                 every co-op game in the 500+ reviews dataset,
+    data/all-coop-games.{csv,json}     as a Markdown table plus CSV and JSON
+    data/all-coop-games-no-floor.*     every co-op game with no review floor (CSV and
+                                       JSON only); written only once imho.run serves
+                                       that dataset, skipped while it is missing
+
+Each output has its own "worth a commit" rule (see decide_write): it is written
+when 3+ of its entries changed, when generate.py or overrides.json changed, or
+when it has not been written for MAX_QUIET_DAYS.
 
 What gets published: imho.run's own ranks, co-op mode classification and
 taglines, plus each game's name, Steam appid, imho.run URL and Steam store
@@ -25,7 +37,9 @@ a non-zero exit and leaves every file untouched.
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
+import io
 import json
 import re
 import sys
@@ -43,6 +57,11 @@ README = ROOT / "README.md"
 LIST_JSON = ROOT / "data" / "list.json"
 TAGLINES = ROOT / "taglines.json"
 OVERRIDES = ROOT / "overrides.json"
+ALL_MD = ROOT / "ALL-COOP-GAMES.md"
+ALL_CSV = ROOT / "data" / "all-coop-games.csv"
+ALL_JSON = ROOT / "data" / "all-coop-games.json"
+NOFLOOR_CSV = ROOT / "data" / "all-coop-games-no-floor.csv"
+NOFLOOR_JSON = ROOT / "data" / "all-coop-games-no-floor.json"
 
 SITE = "https://imho.run"
 API = "https://api.imho.run"
@@ -55,6 +74,14 @@ COOP_DATASET = (
     f"{SITE}/datasets/steam-coop-games-by-mode.json",
     f"{API}/api/datasets/steam-coop-games-by-mode.json",
 )
+COOP_DATASET_PAGE = f"{SITE}/datasets/steam-coop-games-by-mode"
+# The same classification with no review floor. Optional: while imho.run does
+# not serve it (404 or unreachable) the no-floor files are simply not written.
+NOFLOOR_DATASET = (
+    f"{SITE}/datasets/steam-coop-games-all.json",
+    f"{API}/api/datasets/steam-coop-games-all.json",
+)
+NOFLOOR_DATASET_PAGE = f"{SITE}/datasets/steam-coop-games-all"
 MODS_DATASET = (f"{SITE}/datasets/coop-mods.json", f"{API}/api/datasets/coop-mods.json")
 # API calls go straight to the backend host (imho.run/api/* is a proxy to it).
 AWARDS = f"{API}/api/awards"
@@ -94,7 +121,22 @@ DISCOVER_FIELDS = (
     "is_free",
     "co_op_hook",
 )
-DATASET_FIELDS = ("appid", "name", "imho_url", "mode", "release_year")
+DATASET_FIELDS = ("appid", "name", "imho_url", "mode", "release_year", "reviews_bucket")
+# The full lists. The 500+ dataset states its floor; the text of
+# ALL-COOP-GAMES.md says "500+ reviews", so a different floor stops the run.
+REVIEW_FLOOR = 500
+FLOOR_PHRASE = f"{REVIEW_FLOOR}+ reviews"  # our selection rule, not a game's count
+ALL_MIN_ROWS = 1500
+NOFLOOR_MIN_ROWS = 5000
+FLOOR_BUCKETS = ("20k+", "5k+", "1k+", "500+")  # highest first
+# No-floor buckets are ranges too ("100+", "<10"...), never an exact count.
+NOFLOOR_BUCKET_RE = re.compile(r"^(?:0|<\d{1,3}k?|\d{1,3}k?\+)$")
+DATASET_MODES = ("both", "online", "local")  # section order in ALL-COOP-GAMES.md
+MODE_DATA = {"both": "online+local", "online": "online", "local": "local"}  # as in list.json
+MODE_SHOWN = {"both": "online + local", "online": "online", "local": "local"}
+MODE_SECTION = {"both": "Online and local co-op", "online": "Online co-op only", "local": "Local co-op only"}
+FULL_COLUMNS = ("appid", "name", "steam_url", "imho_url", "mode", "release_year", "reviews_bucket")
+IMHO_URL_RE = re.compile(r"^https://imho\.run/games/\d+/[a-z0-9-]+\?utm_source=github$")
 AWARD_FIELDS = ("rank", "appid", "name")
 MOD_FIELDS = ("appid", "game", "imho_url", "mod_name", "mod_url", "maturity", "note_en")
 
@@ -304,12 +346,71 @@ def hub_link(path: str) -> str:
 # ── Fetch ───────────────────────────────────────────────────────────────────
 
 
-def fetch_dataset() -> dict[int, dict[str, Any]]:
-    doc = http_json_first(COOP_DATASET)
+def dataset_rows(doc: Any, what: str, min_rows: int, buckets: str) -> list[dict[str, Any]]:
+    """Validate a co-op dataset document field by field. Any surprise (missing
+    field, unknown mode, a review bucket that is not a range) stops the run."""
     rows = doc.get("rows") if isinstance(doc, dict) else None
-    if not isinstance(rows, list) or len(rows) < 500:
-        raise GenerationError("co-op dataset: missing or too few rows")
-    return {int(r["appid"]): pick(r, DATASET_FIELDS, "co-op dataset") for r in rows}
+    if not isinstance(rows, list) or len(rows) < min_rows:
+        got = len(rows) if isinstance(rows, list) else "no"
+        raise GenerationError(f"{what}: {got} rows, minimum {min_rows}")
+    out: list[dict[str, Any]] = []
+    seen: set[int] = set()
+    for raw in rows:
+        if not isinstance(raw, dict):
+            raise GenerationError(f"{what}: a row is not an object")
+        row = pick(raw, DATASET_FIELDS, what)
+        appid, name, year, bucket = row["appid"], row["name"], row["release_year"], row["reviews_bucket"]
+        if not isinstance(appid, int) or isinstance(appid, bool) or appid <= 0 or appid in seen:
+            raise GenerationError(f"{what}: bad or duplicate appid {appid!r}")
+        if not isinstance(name, str) or not name.strip():
+            raise GenerationError(f"{what}: appid {appid} has no name")
+        if row["mode"] not in DATASET_MODES:
+            raise GenerationError(f"{what}: appid {appid} has unknown mode {row['mode']!r}")
+        if year is not None and not (isinstance(year, int) and 1970 <= year <= 2100):
+            raise GenerationError(f"{what}: appid {appid} has bad release_year {year!r}")
+        if not bucket_ok(bucket, buckets):
+            raise GenerationError(f"{what}: appid {appid} has bad reviews_bucket {bucket!r}")
+        seen.add(appid)
+        row["name"] = name.strip()
+        out.append(row)
+    return out
+
+
+def bucket_ok(bucket: Any, buckets: str) -> bool:
+    if buckets == "floor":
+        return bucket in FLOOR_BUCKETS
+    return bucket is None or (isinstance(bucket, str) and bool(NOFLOOR_BUCKET_RE.match(bucket)))
+
+
+def fetch_dataset() -> list[dict[str, Any]]:
+    doc = http_json_first(COOP_DATASET)
+    if not isinstance(doc, dict) or doc.get("min_reviews") != REVIEW_FLOOR:
+        raise GenerationError(
+            f"co-op dataset: min_reviews is {doc.get('min_reviews') if isinstance(doc, dict) else None!r}, "
+            f"expected {REVIEW_FLOOR} (ALL-COOP-GAMES.md states that floor)"
+        )
+    return dataset_rows(doc, "co-op dataset", ALL_MIN_ROWS, "floor")
+
+
+def fetch_nofloor() -> list[dict[str, Any]] | None:
+    """The no-floor dataset, or None while imho.run does not serve it. Not
+    there (404, network error) means skip; there but malformed means stop."""
+    for url in NOFLOOR_DATASET:
+        try:
+            req = urllib.request.Request(
+                url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"}
+            )
+            with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT * 3) as resp:
+                body = resp.read()
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            print(f"  no-floor dataset not available at {url}: {exc}", file=sys.stderr)
+            continue
+        try:
+            doc = json.loads(body.decode("utf-8"))
+        except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+            raise GenerationError(f"no-floor dataset at {url}: not valid JSON ({exc})") from exc
+        return dataset_rows(doc, "no-floor dataset", NOFLOOR_MIN_ROWS, "any")
+    return None
 
 
 def discover_page(preset: str, limit: int, offset: int = 0) -> list[Game]:
@@ -655,7 +756,22 @@ def section_title(s: Section, meta: dict[str, Any]) -> str:
     return s.title.format(year=meta.get("awards", {}).get("year", ""))
 
 
-def render(sections: dict[str, list[Entry]], meta: dict[str, Any], today: str) -> str:
+def full_list_pointer(has_nofloor: bool) -> str:
+    line = (
+        "Want every co-op game, not just the picks? See [ALL-COOP-GAMES.md](ALL-COOP-GAMES.md): "
+        f"all co-op games on Steam with {FLOOR_PHRASE} (CSV/JSON in [data/](data/))."
+    )
+    if has_nofloor:
+        line += (
+            " With no review floor at all: [CSV](data/all-coop-games-no-floor.csv) · "
+            "[JSON](data/all-coop-games-no-floor.json)."
+        )
+    return line
+
+
+def render(
+    sections: dict[str, list[Entry]], meta: dict[str, Any], today: str, has_nofloor: bool
+) -> str:
     present = [s for s in SECTIONS if sections.get(s.id)]
     total = sum(len(v) for v in sections.values())
     lines = [
@@ -666,6 +782,8 @@ def render(sections: dict[str, list[Entry]], meta: dict[str, Any], today: str) -
         "",
         "Maintained by [imho.run](https://imho.run/?utm_source=github), generated weekly from "
         "its public data. Not affiliated with Valve.",
+        "",
+        full_list_pointer(has_nofloor),
         "",
         "Each game name opens its Steam store page; \"similar games\" opens a list of games "
         "like it on imho.run. The rules behind every section are in "
@@ -722,7 +840,8 @@ def render(sections: dict[str, list[Entry]], meta: dict[str, Any], today: str) -
         "game. Where there is none yet, the line lists the game's top player tags instead. "
         "Nothing is copied from the Steam store.",
         "- No review counts, percentages, store text or images are published here.",
-        "- The machine-readable version of this list is [`data/list.json`](data/list.json).",
+        "- The machine-readable version of this list is [`data/list.json`](data/list.json). "
+        "The full co-op list behind it is [ALL-COOP-GAMES.md](ALL-COOP-GAMES.md).",
         "",
         "## Contributing",
         "",
@@ -744,6 +863,252 @@ def render(sections: dict[str, list[Entry]], meta: dict[str, Any], today: str) -
     return "\n".join(lines)
 
 
+# ── Full lists ──────────────────────────────────────────────────────────────
+
+
+def bucket_rank(bucket: str | None) -> float:
+    if not bucket:
+        return -1.0
+    m = re.match(r"^(<)?(\d+)(k)?\+?$", bucket)
+    if not m:
+        return -1.0
+    n = int(m.group(2)) * (1000 if m.group(3) else 1)
+    return n - 0.5 if m.group(1) else float(n)
+
+
+def full_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Whitelisted output rows, grouped by mode, then review bucket (highest
+    first), then name."""
+    order = {m: i for i, m in enumerate(DATASET_MODES)}
+    ranked = sorted(
+        rows,
+        key=lambda r: (order[r["mode"]], -bucket_rank(r["reviews_bucket"]), r["name"].casefold(), r["appid"]),
+    )
+    out = []
+    for r in ranked:
+        game = Game(appid=r["appid"], name=r["name"])
+        out.append(
+            {
+                "appid": r["appid"],
+                "name": r["name"],
+                "steam_url": steam_link(r["appid"]),
+                "imho_url": imho_link(game),
+                "mode": MODE_DATA[r["mode"]],
+                "release_year": r["release_year"],
+                "reviews_bucket": r["reviews_bucket"],
+            }
+        )
+    return out
+
+
+def render_all_md(rows: list[dict[str, Any]], today: str, has_nofloor: bool) -> str:
+    data_mode = {v: k for k, v in MODE_DATA.items()}
+    by_mode: dict[str, list[dict[str, Any]]] = {m: [] for m in DATASET_MODES}
+    for r in rows:
+        by_mode[data_mode[r["mode"]]].append(r)
+    lines = [
+        f"# All co-op games on Steam with {FLOOR_PHRASE}",
+        "",
+        f"{len(rows)} games: every Steam game with genuine co-op and {FLOOR_PHRASE} in "
+        "imho.run's data. The hand-picked short list is in the [README](README.md).",
+        "",
+        f"- **Why {FLOOR_PHRASE}:** Steam has thousands of small co-op releases that few people "
+        "have played. The floor keeps this list to games with enough players behind them to judge.",
+        "- **Mode:** online, local or online + local, classified by imho.run from each game's "
+        "Steam co-op categories and community tags; competitive multiplayer alone does not count "
+        f"and LAN-only games are left out ([classification rules]({COOP_DATASET_PAGE}?{UTM})).",
+        "- **Reviews** is a bucket (500+, 1k+, 5k+, 20k+), not a review count.",
+        "- **Game** opens the Steam store page; **Similar** opens games like it on imho.run.",
+        "- The same rows as data: [CSV](data/all-coop-games.csv) · [JSON](data/all-coop-games.json).",
+    ]
+    if has_nofloor:
+        lines.append(
+            "- **No review floor:** every co-op game imho.run classifies, as "
+            "[CSV](data/all-coop-games-no-floor.csv) · [JSON](data/all-coop-games-no-floor.json) "
+            f"only, too long for a table here ([dataset page]({NOFLOOR_DATASET_PAGE}?{UTM}))."
+        )
+    lines += [
+        "- **License:** [CC BY 4.0](LICENSE-DATA); credit imho.run (https://imho.run) when you "
+        "reuse it. Game names are their owners' trademarks. Not affiliated with Valve.",
+        f"- Regenerated weekly from imho.run's [public dataset]({COOP_DATASET_PAGE}?{UTM}) by "
+        f"[`generate.py`](generate.py). Last generated: {today}.",
+        "",
+        "## Contents",
+        "",
+    ]
+    for m in DATASET_MODES:
+        title = MODE_SECTION[m]
+        lines.append(f"- [{title}](#{anchor(title)}) ({len(by_mode[m])})")
+    lines.append("")
+    for m in DATASET_MODES:
+        lines += [
+            f"## {MODE_SECTION[m]}",
+            "",
+            f"{len(by_mode[m])} games, by review bucket (highest first), then by name.",
+            "",
+            "| Game | Year | Mode | Reviews | Similar |",
+            "| --- | --- | --- | --- | --- |",
+        ]
+        for r in by_mode[m]:
+            year = r["release_year"] or ""
+            lines.append(
+                f"| [{md_escape(r['name'])}]({r['steam_url']}) | {year} | {MODE_SHOWN[m]} | "
+                f"{r['reviews_bucket']} | [similar]({r['imho_url']}) |"
+            )
+        lines.append("")
+    return "\n".join(lines)
+
+
+def render_csv(rows: list[dict[str, Any]]) -> str:
+    buf = io.StringIO()
+    w = csv.writer(buf, lineterminator="\n")
+    w.writerow(FULL_COLUMNS)
+    for r in rows:
+        w.writerow(["" if r[c] is None else r[c] for c in FULL_COLUMNS])
+    return buf.getvalue()
+
+
+def render_full_json(
+    rows: list[dict[str, Any]], today: str, digest: str, page: str, floor: int | None
+) -> str:
+    """One row per line, so a weekly diff shows exactly which games changed."""
+    meta = {
+        "generated_at": today,
+        "source": page,
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "imho.run (https://imho.run)",
+        "review_floor": floor,
+        "input_hash": digest,
+        "count": len(rows),
+        "columns": list(FULL_COLUMNS),
+    }
+    head = json.dumps(meta, ensure_ascii=False, indent=1)[:-2]  # drop the closing "\n}"
+    body = ",\n".join("  " + json.dumps(r, ensure_ascii=False) for r in rows)
+    return f'{head},\n "rows": [\n{body}\n ]\n}}\n'
+
+
+def check_full_rows(rows: Any, fname: str, buckets: str) -> list[str]:
+    """Every field of every row must be one we mean to publish."""
+    if not isinstance(rows, list) or not rows:
+        return [f"{fname}: no rows"]
+    problems = []
+    for i, r in enumerate(rows, 1):
+        where = f"{fname}: row {i}"
+        if not isinstance(r, dict) or tuple(r) != FULL_COLUMNS:
+            problems.append(f"{where}: columns are not {FULL_COLUMNS}")
+            continue
+        appid = r["appid"]
+        if not isinstance(appid, int) or appid <= 0:
+            problems.append(f"{where}: bad appid {appid!r}")
+            continue
+        if not isinstance(r["name"], str) or not r["name"].strip():
+            problems.append(f"{where}: empty name")
+        if r["steam_url"] != steam_link(appid):
+            problems.append(f"{where}: bad steam_url {r['steam_url']!r}")
+        imho = r["imho_url"]
+        if not (isinstance(imho, str) and IMHO_URL_RE.match(imho) and f"/games/{appid}/" in imho):
+            problems.append(f"{where}: bad imho_url {imho!r}")
+        if r["mode"] not in MODE_DATA.values():
+            problems.append(f"{where}: bad mode {r['mode']!r}")
+        year = r["release_year"]
+        if year is not None and not (isinstance(year, int) and 1970 <= year <= 2100):
+            problems.append(f"{where}: bad release_year {year!r}")
+        if not bucket_ok(r["reviews_bucket"], buckets):
+            problems.append(f"{where}: bad reviews_bucket {r['reviews_bucket']!r}")
+    return problems
+
+
+def parse_csv(text: str) -> list[dict[str, Any]]:
+    reader = csv.reader(io.StringIO(text))
+    header = tuple(next(reader, ()))
+    if header != FULL_COLUMNS:
+        raise ValueError(f"header is {header}")
+    out = []
+    for cells in reader:
+        if len(cells) != len(FULL_COLUMNS):
+            raise ValueError(f"row with {len(cells)} cells")
+        r: dict[str, Any] = dict(zip(FULL_COLUMNS, cells, strict=True))
+        r["appid"] = int(r["appid"])
+        r["release_year"] = int(r["release_year"]) if r["release_year"] else None
+        r["reviews_bucket"] = r["reviews_bucket"] or None
+        out.append(r)
+    return out
+
+
+def check_full_files(
+    md: str | None, csv_text: str, json_text: str, prefix: str, buckets: str
+) -> list[str]:
+    """Checks the files as they are written (or as committed, with --check)."""
+    problems = check_text(md, ALL_MD.name) if md is not None else []
+    try:
+        problems += check_full_rows(json.loads(json_text).get("rows"), f"{prefix}.json", buckets)
+    except (json.JSONDecodeError, AttributeError) as exc:
+        problems.append(f"{prefix}.json: unreadable ({exc})")
+    try:
+        problems += check_full_rows(parse_csv(csv_text), f"{prefix}.csv", buckets)
+    except (ValueError, csv.Error) as exc:
+        problems.append(f"{prefix}.csv: unreadable ({exc})")
+    return problems
+
+
+def diff_rows(path: Path, rows: list[dict[str, Any]]) -> tuple[dict[str, Any] | None, dict[str, int]]:
+    if not path.exists():
+        return None, {}
+    prev = json.loads(path.read_text(encoding="utf-8"))
+
+    def key(r: dict[str, Any]) -> tuple[Any, ...]:
+        return (r["name"], r["mode"], r["release_year"], r["reviews_bucket"])
+
+    before = {r["appid"]: key(r) for r in prev.get("rows", [])}
+    after = {r["appid"]: key(r) for r in rows}
+    stats = {
+        "before": len(before),
+        "added": len(after.keys() - before.keys()),
+        "removed": len(before.keys() - after.keys()),
+        "changed": sum(1 for a in after.keys() & before.keys() if after[a] != before[a]),
+    }
+    return prev, stats
+
+
+def decide_write(
+    label: str,
+    prev: dict[str, Any] | None,
+    stats: dict[str, int],
+    digest: str,
+    force: bool,
+    structural: bool = False,
+) -> bool:
+    """The commit rule, the same for every output: write when 3+ entries were
+    added, removed or changed (moved section / mode / bucket), when the
+    generator or overrides changed, when the output's layout must change
+    (structural), or when it has been quiet for MAX_QUIET_DAYS. Adding or
+    removing more than MAX_CHURN of the entries stops the run unless forced."""
+    if prev is None:
+        print(f"  {label}: no previous version; writing it")
+        return True
+    print(f"  {label} vs last: {stats}")
+    churn = (stats["added"] + stats["removed"]) / max(stats["before"], 1)
+    if churn > MAX_CHURN and not force:
+        raise GenerationError(
+            f"{label}: {churn:.0%} of entries changed (max {MAX_CHURN:.0%}). Check the data, "
+            "then re-run the workflow by hand with force=true if the change is real."
+        )
+    changes = stats["added"] + stats["removed"] + stats.get("moved", 0) + stats.get("changed", 0)
+    quiet_days = days_since(prev.get("generated_at"))
+    if (
+        changes < MIN_MEANINGFUL_CHANGES
+        and prev.get("input_hash") == digest
+        and quiet_days < MAX_QUIET_DAYS
+        and not structural
+    ):
+        print(
+            f"  {label}: {changes} entries changed (< {MIN_MEANINGFUL_CHANGES}), last written "
+            f"{quiet_days} days ago; not written."
+        )
+        return False
+    return True
+
+
 # ── Checks ──────────────────────────────────────────────────────────────────
 
 
@@ -755,15 +1120,27 @@ def forbidden_hit(text: str) -> str | None:
     return None
 
 
-def check_readme(text: str) -> list[str]:
+# The Game cell of an ALL-COOP-GAMES.md table row. Game names are factual
+# identifiers ("100% Orange Juice"), so the check skips them; every other cell
+# is checked, and the data files are checked field by field.
+NAME_CELL_RE = re.compile(r"^\| \[(?:\\.|[^\\\]])*\]\(https://store\.steampowered\.com/app/\d+/\) \|")
+
+
+def check_text(text: str, fname: str) -> list[str]:
     problems = []
     for n, line in enumerate(text.splitlines(), 1):
         if line.startswith(ALLOWED_LINE_PREFIX):
             continue
-        hit = forbidden_hit(line)
+        # "500+ reviews" is the list's selection rule, not a game's count.
+        body = NAME_CELL_RE.sub("|", line).replace(FLOOR_PHRASE, "")
+        hit = forbidden_hit(body)
         if hit:
-            problems.append(f"README.md:{n}: forbidden content {hit!r}: {line[:120]}")
+            problems.append(f"{fname}:{n}: forbidden content {hit!r}: {line[:120]}")
     return problems
+
+
+def check_readme(text: str) -> list[str]:
+    return check_text(text, README.name)
 
 
 def validate(sections: dict[str, list[Entry]], meta: dict[str, Any]) -> None:
@@ -837,7 +1214,11 @@ def run(force: bool, tagline_budget: int, prefetch: int) -> int:
     taglines = load_taglines()
 
     print("Fetching imho.run public data ...")
-    dataset = fetch_dataset()
+    coop_rows = fetch_dataset()
+    dataset = {r["appid"]: r for r in coop_rows}
+    nofloor = fetch_nofloor()
+    print(f"  co-op dataset {len(coop_rows)} rows; no-floor dataset "
+          f"{'not available' if nofloor is None else f'{len(nofloor)} rows'}")
     pools = {"coop": fetch_coop_pool()}
     for preset in ("split-screen", "couch-coop-4-players", "coop-horror", "cross-platform-coop"):
         pools[preset] = discover_page(preset, 100)
@@ -868,13 +1249,29 @@ def run(force: bool, tagline_budget: int, prefetch: int) -> int:
     validate(sections, meta)
 
     today = datetime.now(UTC).date().isoformat()
-    readme = render(sections, meta, today)
-    problems = check_readme(readme)
-    if problems:
-        raise GenerationError("forbidden content in README:\n" + "\n".join(problems))
-
-    prev, stats = diff_against_previous(sections)
     digest = input_hash()
+    # The no-floor files stay linked once they exist, even in a week when the
+    # dataset is briefly unreachable (their last version is kept).
+    has_nofloor = nofloor is not None or NOFLOOR_JSON.exists()
+
+    # Render and check everything first; nothing is written unless all of it passes.
+    readme = render(sections, meta, today, has_nofloor)
+    problems = check_readme(readme)
+
+    full = full_rows(coop_rows)
+    all_md = render_all_md(full, today, has_nofloor)
+    all_csv = render_csv(full)
+    all_json = render_full_json(full, today, digest, COOP_DATASET_PAGE, REVIEW_FLOOR)
+    problems += check_full_files(all_md, all_csv, all_json, "data/all-coop-games", "floor")
+
+    nf_rows = full_rows(nofloor) if nofloor is not None else None
+    if nf_rows is not None:
+        nf_csv = render_csv(nf_rows)
+        nf_json = render_full_json(nf_rows, today, digest, NOFLOOR_DATASET_PAGE, None)
+        problems += check_full_files(None, nf_csv, nf_json, "data/all-coop-games-no-floor", "any")
+    if problems:
+        raise GenerationError("publishing rules broken:\n" + "\n".join(problems[:50]))
+
     total = sum(len(v) for v in sections.values())
     sources: dict[str, int] = {}
     for v in sections.values():
@@ -883,28 +1280,38 @@ def run(force: bool, tagline_budget: int, prefetch: int) -> int:
     print(f"  {total} entries; descriptions by source: {sources}")
     for s in SECTIONS:
         print(f"    {s.id:15s} {len(sections.get(s.id, []))}")
-    if prev is not None:
-        print(f"  vs last list: {stats}")
-        churn = (stats["added"] + stats["removed"]) / max(stats["before"], 1)
-        if churn > MAX_CHURN and not force:
-            raise GenerationError(
-                f"{churn:.0%} of entries changed (max {MAX_CHURN:.0%}). Check the data, then "
-                "re-run the workflow by hand with force=true if the change is real."
-            )
-        changes = stats["added"] + stats["removed"] + stats["moved"]
-        quiet_days = days_since(prev.get("generated_at"))
-        if (
-            changes < MIN_MEANINGFUL_CHANGES
-            and prev.get("input_hash") == digest
-            and quiet_days < MAX_QUIET_DAYS
-        ):
-            print(
-                f"  {changes} entries changed (< {MIN_MEANINGFUL_CHANGES}), last written "
-                f"{quiet_days} days ago; nothing written."
-            )
-            return 0
+
+    def mentions_nofloor(path: Path) -> bool | None:
+        return NOFLOOR_JSON.name in path.read_text(encoding="utf-8") if path.exists() else None
+
+    # Each output decides on its own; all guards run before any file is written.
+    prev, stats = diff_against_previous(sections)
+    old_readme = README.read_text(encoding="utf-8") if README.exists() else ""
+    readme_layout = mentions_nofloor(README) != has_nofloor or ALL_MD.name not in old_readme
+    write_readme = decide_write("README list", prev, stats, digest, force, readme_layout)
+    prev_all, stats_all = diff_rows(ALL_JSON, full)
+    all_layout = mentions_nofloor(ALL_MD) != has_nofloor or not ALL_CSV.exists()
+    write_all = decide_write("full list", prev_all, stats_all, digest, force, all_layout)
+    write_nf = False
+    if nf_rows is not None:
+        prev_nf, stats_nf = diff_rows(NOFLOOR_JSON, nf_rows)
+        write_nf = decide_write(
+            "no-floor list", prev_nf, stats_nf, digest, force, not NOFLOOR_CSV.exists()
+        )
 
     LIST_JSON.parent.mkdir(parents=True, exist_ok=True)
+    if write_all:
+        write_lf(ALL_MD, all_md)
+        write_lf(ALL_CSV, all_csv)
+        write_lf(ALL_JSON, all_json)
+        print(f"  ALL-COOP-GAMES.md and data/all-coop-games.csv/.json written ({len(full)} games).")
+    if write_nf and nf_rows is not None:
+        write_lf(NOFLOOR_CSV, nf_csv)
+        write_lf(NOFLOOR_JSON, nf_json)
+        print(f"  data/all-coop-games-no-floor.csv/.json written ({len(nf_rows)} games).")
+    if not write_readme:
+        return 0
+
     payload = {
         "generated_at": today,
         "source": "https://imho.run",
@@ -943,6 +1350,24 @@ def check_only() -> int:
     load_overrides()
     load_taglines()
     problems = check_readme(README.read_text(encoding="utf-8")) if README.exists() else []
+
+    def read(path: Path) -> str:
+        return path.read_text(encoding="utf-8")
+
+    if ALL_MD.exists() or ALL_CSV.exists() or ALL_JSON.exists():
+        if not (ALL_MD.exists() and ALL_CSV.exists() and ALL_JSON.exists()):
+            problems.append("full list: ALL-COOP-GAMES.md, data/all-coop-games.csv and .json go together")
+        else:
+            problems += check_full_files(
+                read(ALL_MD), read(ALL_CSV), read(ALL_JSON), "data/all-coop-games", "floor"
+            )
+    if NOFLOOR_CSV.exists() or NOFLOOR_JSON.exists():
+        if not (NOFLOOR_CSV.exists() and NOFLOOR_JSON.exists()):
+            problems.append("no-floor list: the .csv and .json go together")
+        else:
+            problems += check_full_files(
+                None, read(NOFLOOR_CSV), read(NOFLOOR_JSON), "data/all-coop-games-no-floor", "any"
+            )
     for p in problems:
         print(p, file=sys.stderr)
     print("check: ok" if not problems else f"check: {len(problems)} problem(s)")

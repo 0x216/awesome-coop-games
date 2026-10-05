@@ -5,6 +5,11 @@ Corrections are welcome. The list is rebuilt every week by
 overwritten on the next run. Fixes go into [`overrides.json`](overrides.json),
 which the generator applies every time.
 
+ALL-COOP-GAMES.md and the `data/all-coop-games*` files are a straight copy of
+imho.run's co-op dataset, so `overrides.json` does not change them. If a game
+there has the wrong mode or isn't co-op at all, open an issue and it gets fixed
+at the source.
+
 ## Report a problem
 
 Open an issue if a game has the wrong co-op mode, a misleading description,
@@ -41,7 +46,8 @@ python generate.py --check
 
 ## What we won't merge
 
-- Edits to README.md or `data/list.json` (they are generated).
+- Edits to README.md, ALL-COOP-GAMES.md or anything in `data/` (they are
+  generated).
 - Store descriptions, review numbers, images or affiliate links.
 - Games without real co-op (competitive multiplayer only).
 
