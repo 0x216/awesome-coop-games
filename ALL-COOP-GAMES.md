@@ -1,6 +1,6 @@
 # All co-op games on Steam with 500+ reviews
 
-2049 games: every Steam game with genuine co-op and 500+ reviews in imho.run's data. The hand-picked short list is in the [README](README.md).
+2058 games: every Steam game with genuine co-op and 500+ reviews in imho.run's data. The hand-picked short list is in the [README](README.md).
 
 - **Why 500+ reviews:** Steam has thousands of small co-op releases that few people have played. The floor keeps this list to games with enough players behind them to judge.
 - **Mode:** online, local or online + local, classified by imho.run from each game's Steam co-op categories and community tags; competitive multiplayer alone does not count and LAN-only games are left out ([classification rules](https://imho.run/datasets/steam-coop-games-by-mode?utm_source=github)).
@@ -9,12 +9,12 @@
 - The same rows as data: [CSV](data/all-coop-games.csv) · [JSON](data/all-coop-games.json).
 - **No review floor:** every co-op game imho.run classifies, as [CSV](data/all-coop-games-no-floor.csv) · [JSON](data/all-coop-games-no-floor.json) only, too long for a table here ([dataset page](https://imho.run/datasets/steam-coop-games-all?utm_source=github)).
 - **License:** [CC BY 4.0](LICENSE-DATA); credit imho.run (https://imho.run) when you reuse it. Game names are their owners' trademarks. Not affiliated with Valve.
-- Regenerated weekly from imho.run's [public dataset](https://imho.run/datasets/steam-coop-games-by-mode?utm_source=github) by [`generate.py`](generate.py). Last generated: 2026-10-05.
+- Regenerated weekly from imho.run's [public dataset](https://imho.run/datasets/steam-coop-games-by-mode?utm_source=github) by [`generate.py`](generate.py). Last generated: 2026-10-12.
 
 ## Contents
 
 - [Online and local co-op](#online-and-local-co-op) (288)
-- [Online co-op only](#online-co-op-only) (1515)
+- [Online co-op only](#online-co-op-only) (1524)
 - [Local co-op only](#local-co-op-only) (246)
 
 ## Online and local co-op
@@ -314,7 +314,7 @@
 
 ## Online co-op only
 
-1515 games, by review bucket (highest first), then by name.
+1524 games, by review bucket (highest first), then by name.
 
 | Game | Year | Mode | Reviews | Similar |
 | --- | --- | --- | --- | --- |
@@ -322,6 +322,7 @@
 | [Abiotic Factor](https://store.steampowered.com/app/427410/) | 2025 | online | 20k+ | [similar](https://imho.run/games/427410/abiotic-factor?utm_source=github) |
 | [Age of Empires II: Definitive Edition](https://store.steampowered.com/app/813780/) | 2019 | online | 20k+ | [similar](https://imho.run/games/813780/age-of-empires-ii-definitive-edition?utm_source=github) |
 | [Age of Empires IV: Anniversary Edition](https://store.steampowered.com/app/1466860/) | 2021 | online | 20k+ | [similar](https://imho.run/games/1466860/age-of-empires-iv-anniversary-edition?utm_source=github) |
+| [AION 2](https://store.steampowered.com/app/3393110/) | 2026 | online | 20k+ | [similar](https://imho.run/games/3393110/aion-2?utm_source=github) |
 | [American Truck Simulator](https://store.steampowered.com/app/270880/) | 2016 | online | 20k+ | [similar](https://imho.run/games/270880/american-truck-simulator?utm_source=github) |
 | [Among Us](https://store.steampowered.com/app/945360/) | 2018 | online | 20k+ | [similar](https://imho.run/games/945360/among-us?utm_source=github) |
 | [Aniimo](https://store.steampowered.com/app/4126040/) | 2026 | online | 20k+ | [similar](https://imho.run/games/4126040/aniimo?utm_source=github) |
@@ -653,6 +654,7 @@
 | [Friends vs Friends](https://store.steampowered.com/app/1785150/) | 2023 | online | 5k+ | [similar](https://imho.run/games/1785150/friends-vs-friends?utm_source=github) |
 | [From the Depths](https://store.steampowered.com/app/268650/) | 2020 | online | 5k+ | [similar](https://imho.run/games/268650/from-the-depths?utm_source=github) |
 | [Galactic Civilizations III](https://store.steampowered.com/app/226860/) | 2015 | online | 5k+ | [similar](https://imho.run/games/226860/galactic-civilizations-iii?utm_source=github) |
+| [Gears of War: E-Day](https://store.steampowered.com/app/3010850/) | 2026 | online | 5k+ | [similar](https://imho.run/games/3010850/gears-of-war-e-day?utm_source=github) |
 | [Generation Zero®](https://store.steampowered.com/app/704270/) | 2019 | online | 5k+ | [similar](https://imho.run/games/704270/generation-zero?utm_source=github) |
 | [GeoGuessr Steam Edition](https://store.steampowered.com/app/3478870/) | 2025 | online | 5k+ | [similar](https://imho.run/games/3478870/geoguessr-steam-edition?utm_source=github) |
 | [Ghosts of Tabor](https://store.steampowered.com/app/1957780/) | 2023 | online | 5k+ | [similar](https://imho.run/games/1957780/ghosts-of-tabor?utm_source=github) |
@@ -963,6 +965,7 @@
 | [Construction Simulator 2015](https://store.steampowered.com/app/289950/) | 2014 | online | 1k+ | [similar](https://imho.run/games/289950/construction-simulator-2015?utm_source=github) |
 | [ContractVille](https://store.steampowered.com/app/2698780/) | 2025 | online | 1k+ | [similar](https://imho.run/games/2698780/contractville?utm_source=github) |
 | [Cossacks 3](https://store.steampowered.com/app/333420/) | 2016 | online | 1k+ | [similar](https://imho.run/games/333420/cossacks-3?utm_source=github) |
+| [CPM 2](https://store.steampowered.com/app/4252340/) | 2026 | online | 1k+ | [similar](https://imho.run/games/4252340/cpm-2?utm_source=github) |
 | [Craft The World](https://store.steampowered.com/app/248390/) | 2014 | online | 1k+ | [similar](https://imho.run/games/248390/craft-the-world?utm_source=github) |
 | [Creativerse](https://store.steampowered.com/app/280790/) | 2017 | online | 1k+ | [similar](https://imho.run/games/280790/creativerse?utm_source=github) |
 | [Creeper World 4](https://store.steampowered.com/app/848480/) | 2020 | online | 1k+ | [similar](https://imho.run/games/848480/creeper-world-4?utm_source=github) |
@@ -1199,6 +1202,7 @@
 | [Necromunda: Underhive Wars](https://store.steampowered.com/app/566440/) | 2020 | online | 1k+ | [similar](https://imho.run/games/566440/necromunda-underhive-wars?utm_source=github) |
 | [NECROPOLIS: BRUTAL EDITION](https://store.steampowered.com/app/384490/) | 2016 | online | 1k+ | [similar](https://imho.run/games/384490/necropolis-brutal-edition?utm_source=github) |
 | [Need for Speed™ Rivals](https://store.steampowered.com/app/1262600/) | 2020 | online | 1k+ | [similar](https://imho.run/games/1262600/need-for-speed-rivals?utm_source=github) |
+| [Neon Abyss 2](https://store.steampowered.com/app/2235200/) | 2026 | online | 1k+ | [similar](https://imho.run/games/2235200/neon-abyss-2?utm_source=github) |
 | [Never Split the Party](https://store.steampowered.com/app/711810/) | 2019 | online | 1k+ | [similar](https://imho.run/games/711810/never-split-the-party?utm_source=github) |
 | [New Frontier](https://store.steampowered.com/app/1104640/) | 2019 | online | 1k+ | [similar](https://imho.run/games/1104640/new-frontier?utm_source=github) |
 | [Night of the Dead](https://store.steampowered.com/app/1377380/) | 2024 | online | 1k+ | [similar](https://imho.run/games/1377380/night-of-the-dead?utm_source=github) |
@@ -1217,6 +1221,7 @@
 | [Offworld Trading Company](https://store.steampowered.com/app/271240/) | 2016 | online | 1k+ | [similar](https://imho.run/games/271240/offworld-trading-company?utm_source=github) |
 | [Oh Deer](https://store.steampowered.com/app/2708450/) | 2024 | online | 1k+ | [similar](https://imho.run/games/2708450/oh-deer?utm_source=github) |
 | [ONE PIECE Bounty Rush](https://store.steampowered.com/app/2918150/) | 2024 | online | 1k+ | [similar](https://imho.run/games/2918150/one-piece-bounty-rush?utm_source=github) |
+| [OpenFront](https://store.steampowered.com/app/3560670/) | 2026 | online | 1k+ | [similar](https://imho.run/games/3560670/openfront?utm_source=github) |
 | [Operation: Tango](https://store.steampowered.com/app/1335790/) | 2021 | online | 1k+ | [similar](https://imho.run/games/1335790/operation-tango?utm_source=github) |
 | [OPERATOR](https://store.steampowered.com/app/1913370/) | 2023 | online | 1k+ | [similar](https://imho.run/games/1913370/operator?utm_source=github) |
 | [Orcs Must Die! 3](https://store.steampowered.com/app/1522820/) | 2021 | online | 1k+ | [similar](https://imho.run/games/1522820/orcs-must-die-3?utm_source=github) |
@@ -1519,6 +1524,7 @@
 | [Arizona Sunshine® Remake](https://store.steampowered.com/app/2897700/) | 2024 | online | 500+ | [similar](https://imho.run/games/2897700/arizona-sunshine-remake?utm_source=github) |
 | [Astellia](https://store.steampowered.com/app/1185560/) | 2020 | online | 500+ | [similar](https://imho.run/games/1185560/astellia?utm_source=github) |
 | [Backrooms Rec.](https://store.steampowered.com/app/2275020/) | 2024 | online | 500+ | [similar](https://imho.run/games/2275020/backrooms-rec?utm_source=github) |
+| [Backrooms: Code Yellow](https://store.steampowered.com/app/4694270/) | 2026 | online | 500+ | [similar](https://imho.run/games/4694270/backrooms-code-yellow?utm_source=github) |
 | [Bad Guys at School](https://store.steampowered.com/app/1218280/) | 2020 | online | 500+ | [similar](https://imho.run/games/1218280/bad-guys-at-school?utm_source=github) |
 | [Badlanders](https://store.steampowered.com/app/1560500/) | 2022 | online | 500+ | [similar](https://imho.run/games/1560500/badlanders?utm_source=github) |
 | [Battle of Empires : 1914-1918](https://store.steampowered.com/app/316430/) | 2015 | online | 500+ | [similar](https://imho.run/games/316430/battle-of-empires-1914-1918?utm_source=github) |
@@ -1557,6 +1563,7 @@
 | [Darksburg](https://store.steampowered.com/app/939100/) | 2020 | online | 500+ | [similar](https://imho.run/games/939100/darksburg?utm_source=github) |
 | [Darkwater](https://store.steampowered.com/app/619540/) | 2026 | online | 500+ | [similar](https://imho.run/games/619540/darkwater?utm_source=github) |
 | [Darza's Dominion](https://store.steampowered.com/app/1895130/) | 2022 | online | 500+ | [similar](https://imho.run/games/1895130/darza-s-dominion?utm_source=github) |
+| [Dawson Oaks Trailer Park](https://store.steampowered.com/app/3640200/) | 2026 | online | 500+ | [similar](https://imho.run/games/3640200/dawson-oaks-trailer-park?utm_source=github) |
 | [Dead Effect 2](https://store.steampowered.com/app/394760/) | 2016 | online | 500+ | [similar](https://imho.run/games/394760/dead-effect-2?utm_source=github) |
 | [Dead Effect 2 VR](https://store.steampowered.com/app/646200/) | 2017 | online | 500+ | [similar](https://imho.run/games/646200/dead-effect-2-vr?utm_source=github) |
 | [Deadfall Adventures](https://store.steampowered.com/app/231330/) | 2013 | online | 500+ | [similar](https://imho.run/games/231330/deadfall-adventures?utm_source=github) |
@@ -1581,6 +1588,7 @@
 | [Drunkn Bar Fight](https://store.steampowered.com/app/528550/) | 2025 | online | 500+ | [similar](https://imho.run/games/528550/drunkn-bar-fight?utm_source=github) |
 | [Duel Corp.](https://store.steampowered.com/app/1804470/) | 2026 | online | 500+ | [similar](https://imho.run/games/1804470/duel-corp?utm_source=github) |
 | [Duet Night Abyss](https://store.steampowered.com/app/3950020/) | 2026 | online | 500+ | [similar](https://imho.run/games/3950020/duet-night-abyss?utm_source=github) |
+| [Dungeon Brawls](https://store.steampowered.com/app/4246640/) | 2026 | online | 500+ | [similar](https://imho.run/games/4246640/dungeon-brawls?utm_source=github) |
 | [Dungeon Rampage](https://store.steampowered.com/app/3053950/) | 2025 | online | 500+ | [similar](https://imho.run/games/3053950/dungeon-rampage?utm_source=github) |
 | [Dungeons & Dragons Neverwinter Nights 2: Enhanced Edition](https://store.steampowered.com/app/2738630/) | 2025 | online | 500+ | [similar](https://imho.run/games/2738630/dungeons-dragons-neverwinter-nights-2-enhanced-edition?utm_source=github) |
 | [Dungeons of Eternity](https://store.steampowered.com/app/3189340/) | 2025 | online | 500+ | [similar](https://imho.run/games/3189340/dungeons-of-eternity?utm_source=github) |
@@ -1691,7 +1699,6 @@
 | [Obsideo](https://store.steampowered.com/app/1708460/) | 2021 | online | 500+ | [similar](https://imho.run/games/1708460/obsideo?utm_source=github) |
 | [Old Market Simulator](https://store.steampowered.com/app/2878420/) | 2024 | online | 500+ | [similar](https://imho.run/games/2878420/old-market-simulator?utm_source=github) |
 | [On-Together: Virtual Co-Working](https://store.steampowered.com/app/3707400/) | 2026 | online | 500+ | [similar](https://imho.run/games/3707400/on-together-virtual-co-working?utm_source=github) |
-| [OpenFront](https://store.steampowered.com/app/3560670/) | 2026 | online | 500+ | [similar](https://imho.run/games/3560670/openfront?utm_source=github) |
 | [Operation: Tango - Friend Pass](https://store.steampowered.com/app/1377150/) | 2020 | online | 500+ | [similar](https://imho.run/games/1377150/operation-tango-friend-pass?utm_source=github) |
 | [Operator](https://store.steampowered.com/app/1540560/) | 2021 | online | 500+ | [similar](https://imho.run/games/1540560/operator?utm_source=github) |
 | [Ore Factory Squad ⛏️](https://store.steampowered.com/app/4210580/) | 2026 | online | 500+ | [similar](https://imho.run/games/4210580/ore-factory-squad?utm_source=github) |
@@ -1705,6 +1712,7 @@
 | [Parisian Bistro Simulator](https://store.steampowered.com/app/3058360/) | 2026 | online | 500+ | [similar](https://imho.run/games/3058360/parisian-bistro-simulator?utm_source=github) |
 | [Peekaboo](https://store.steampowered.com/app/1048100/) | 2019 | online | 500+ | [similar](https://imho.run/games/1048100/peekaboo?utm_source=github) |
 | [Perfect Golf](https://store.steampowered.com/app/288140/) | 2016 | online | 500+ | [similar](https://imho.run/games/288140/perfect-golf?utm_source=github) |
+| [Permafrost](https://store.steampowered.com/app/2254990/) | 2026 | online | 500+ | [similar](https://imho.run/games/2254990/permafrost?utm_source=github) |
 | [Planet Centauri](https://store.steampowered.com/app/385380/) | 2024 | online | 500+ | [similar](https://imho.run/games/385380/planet-centauri?utm_source=github) |
 | [Play Together](https://store.steampowered.com/app/3198850/) | 2025 | online | 500+ | [similar](https://imho.run/games/3198850/play-together?utm_source=github) |
 | [Prime World](https://store.steampowered.com/app/235340/) | 2014 | online | 500+ | [similar](https://imho.run/games/235340/prime-world?utm_source=github) |
@@ -1817,6 +1825,7 @@
 | [Vermillion - VR Painting](https://store.steampowered.com/app/1608400/) | 2021 | online | 500+ | [similar](https://imho.run/games/1608400/vermillion-vr-painting?utm_source=github) |
 | [Vibrant Venture](https://store.steampowered.com/app/1264520/) | 2020 | online | 500+ | [similar](https://imho.run/games/1264520/vibrant-venture?utm_source=github) |
 | [Vox Machinae](https://store.steampowered.com/app/334540/) | 2022 | online | 500+ | [similar](https://imho.run/games/334540/vox-machinae?utm_source=github) |
+| [Wand & Order: Tidy up the magic shop!](https://store.steampowered.com/app/4981570/) | 2026 | online | 500+ | [similar](https://imho.run/games/4981570/wand-order-tidy-up-the-magic-shop?utm_source=github) |
 | [War Mongrels](https://store.steampowered.com/app/1101790/) | 2021 | online | 500+ | [similar](https://imho.run/games/1101790/war-mongrels?utm_source=github) |
 | [War Rock](https://store.steampowered.com/app/880850/) | 2019 | online | 500+ | [similar](https://imho.run/games/880850/war-rock?utm_source=github) |
 | [Warborne Above Ashes](https://store.steampowered.com/app/3142050/) | 2025 | online | 500+ | [similar](https://imho.run/games/3142050/warborne-above-ashes?utm_source=github) |
@@ -1878,7 +1887,7 @@
 | [UFO 50](https://store.steampowered.com/app/1147860/) | 2024 | local | 5k+ | [similar](https://imho.run/games/1147860/ufo-50?utm_source=github) |
 | [Untitled Goose Game](https://store.steampowered.com/app/837470/) | 2020 | local | 5k+ | [similar](https://imho.run/games/837470/untitled-goose-game?utm_source=github) |
 | [Wizard of Legend](https://store.steampowered.com/app/445980/) | 2018 | local | 5k+ | [similar](https://imho.run/games/445980/wizard-of-legend?utm_source=github) |
-| [AfterBeat (Project Arrhythmia)](https://store.steampowered.com/app/440310/) | 2019 | local | 1k+ | [similar](https://imho.run/games/440310/afterbeat-project-arrhythmia?utm_source=github) |
+| [Afterbeat (Project Arrhythmia)](https://store.steampowered.com/app/440310/) | 2026 | local | 1k+ | [similar](https://imho.run/games/440310/afterbeat-project-arrhythmia?utm_source=github) |
 | [Archvale](https://store.steampowered.com/app/1296360/) | 2021 | local | 1k+ | [similar](https://imho.run/games/1296360/archvale?utm_source=github) |
 | [Astral Ascent](https://store.steampowered.com/app/1280930/) | 2023 | local | 1k+ | [similar](https://imho.run/games/1280930/astral-ascent?utm_source=github) |
 | [Bleed](https://store.steampowered.com/app/239800/) | 2013 | local | 1k+ | [similar](https://imho.run/games/239800/bleed?utm_source=github) |
