@@ -36,6 +36,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 410320,EARTH DEFENSE FORCE 4.1 The Shadow of New Despair,https://store.steampowered.com/app/410320/,https://imho.run/games/410320/earth-defense-force-4-1-the-shadow-of-new-despair?utm_source=github,online+local,2016,5k+
 1007040,EARTH DEFENSE FORCE 5,https://store.steampowered.com/app/1007040/,https://imho.run/games/1007040/earth-defense-force-5?utm_source=github,online+local,2019,5k+
 2108330,F1® 23,https://store.steampowered.com/app/2108330/,https://imho.run/games/2108330/f1-23?utm_source=github,online+local,2023,5k+
+2336220,Feed the Cups,https://store.steampowered.com/app/2336220/,https://imho.run/games/2336220/feed-the-cups?utm_source=github,online+local,2026,5k+
 527230,For The King,https://store.steampowered.com/app/527230/,https://imho.run/games/527230/for-the-king?utm_source=github,online+local,2018,5k+
 1676840,For The King II,https://store.steampowered.com/app/1676840/,https://imho.run/games/1676840/for-the-king-ii?utm_source=github,online+local,2023,5k+
 1097840,Gears 5,https://store.steampowered.com/app/1097840/,https://imho.run/games/1097840/gears-5?utm_source=github,online+local,2019,5k+
@@ -289,6 +290,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 512490,Zombie Estate 2,https://store.steampowered.com/app/512490/,https://imho.run/games/512490/zombie-estate-2?utm_source=github,online+local,2017,500+
 251570,7 Days to Die,https://store.steampowered.com/app/251570/,https://imho.run/games/251570/7-days-to-die?utm_source=github,online,2024,20k+
 427410,Abiotic Factor,https://store.steampowered.com/app/427410/,https://imho.run/games/427410/abiotic-factor?utm_source=github,online,2025,20k+
+2288340,ACE COMBAT 8: WINGS OF THEVE,https://store.steampowered.com/app/2288340/,https://imho.run/games/2288340/ace-combat-8-wings-of-theve?utm_source=github,online,2026,20k+
 813780,Age of Empires II: Definitive Edition,https://store.steampowered.com/app/813780/,https://imho.run/games/813780/age-of-empires-ii-definitive-edition?utm_source=github,online,2019,20k+
 1466860,Age of Empires IV: Anniversary Edition,https://store.steampowered.com/app/1466860/,https://imho.run/games/1466860/age-of-empires-iv-anniversary-edition?utm_source=github,online,2021,20k+
 3393110,AION 2,https://store.steampowered.com/app/3393110/,https://imho.run/games/3393110/aion-2?utm_source=github,online,2026,20k+
@@ -348,7 +350,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 1245620,ELDEN RING,https://store.steampowered.com/app/1245620/,https://imho.run/games/1245620/elden-ring?utm_source=github,online,2022,20k+
 2622380,ELDEN RING NIGHTREIGN,https://store.steampowered.com/app/2622380/,https://imho.run/games/2622380/elden-ring-nightreign?utm_source=github,online,2025,20k+
 359320,Elite Dangerous,https://store.steampowered.com/app/359320/,https://imho.run/games/359320/elite-dangerous?utm_source=github,online,2015,20k+
-1203620,Enshrouded,https://store.steampowered.com/app/1203620/,https://imho.run/games/1203620/enshrouded?utm_source=github,online,2024,20k+
+1203620,Enshrouded,https://store.steampowered.com/app/1203620/,https://imho.run/games/1203620/enshrouded?utm_source=github,online,2026,20k+
 1943950,Escape the Backrooms,https://store.steampowered.com/app/1943950/,https://imho.run/games/1943950/escape-the-backrooms?utm_source=github,online,2025,20k+
 227300,Euro Truck Simulator 2,https://store.steampowered.com/app/227300/,https://imho.run/games/227300/euro-truck-simulator-2?utm_source=github,online,2012,20k+
 236850,Europa Universalis IV,https://store.steampowered.com/app/236850/,https://imho.run/games/236850/europa-universalis-iv?utm_source=github,online,2013,20k+
@@ -477,6 +479,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 365590,Tom Clancy’s The Division™,https://store.steampowered.com/app/365590/,https://imho.run/games/365590/tom-clancy-s-the-division?utm_source=github,online,2016,20k+
 214950,Total War: ROME II - Emperor Edition,https://store.steampowered.com/app/214950/,https://imho.run/games/214950/total-war-rome-ii-emperor-edition?utm_source=github,online,2013,20k+
 34330,Total War: SHOGUN 2,https://store.steampowered.com/app/34330/,https://imho.run/games/34330/total-war-shogun-2?utm_source=github,online,2011,20k+
+201270,Total War: SHOGUN 2,https://store.steampowered.com/app/201270/,https://imho.run/games/201270/total-war-shogun-2?utm_source=github,online,2011,20k+
 594570,Total War: WARHAMMER II,https://store.steampowered.com/app/594570/,https://imho.run/games/594570/total-war-warhammer-ii?utm_source=github,online,2017,20k+
 1142710,Total War: WARHAMMER III,https://store.steampowered.com/app/1142710/,https://imho.run/games/1142710/total-war-warhammer-iii?utm_source=github,online,2022,20k+
 585420,Trailmakers,https://store.steampowered.com/app/585420/,https://imho.run/games/585420/trailmakers?utm_source=github,online,2019,20k+
@@ -499,7 +502,6 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 282800,100% Orange Juice,https://store.steampowered.com/app/282800/,https://imho.run/games/282800/100-orange-juice?utm_source=github,online,2014,5k+
 712100,A Total War Saga: THRONES OF BRITANNIA,https://store.steampowered.com/app/712100/,https://imho.run/games/712100/a-total-war-saga-thrones-of-britannia?utm_source=github,online,2018,5k+
 473690,Absolver,https://store.steampowered.com/app/473690/,https://imho.run/games/473690/absolver?utm_source=github,online,2017,5k+
-2288340,ACE COMBAT 8: WINGS OF THEVE,https://store.steampowered.com/app/2288340/,https://imho.run/games/2288340/ace-combat-8-wings-of-theve?utm_source=github,online,2026,5k+
 224540,Ace of Spades: Battle Builder,https://store.steampowered.com/app/224540/,https://imho.run/games/224540/ace-of-spades-battle-builder?utm_source=github,online,2012,5k+
 1385380,Across the Obelisk,https://store.steampowered.com/app/1385380/,https://imho.run/games/1385380/across-the-obelisk?utm_source=github,online,2022,5k+
 429790,AdventureQuest 3D,https://store.steampowered.com/app/429790/,https://imho.run/games/429790/adventurequest-3d?utm_source=github,online,2022,5k+
@@ -1038,6 +1040,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 254200,FortressCraft Evolved!,https://store.steampowered.com/app/254200/,https://imho.run/games/254200/fortresscraft-evolved?utm_source=github,online,2015,1k+
 983870,FOUNDRY,https://store.steampowered.com/app/983870/,https://imho.run/games/983870/foundry?utm_source=github,online,2024,1k+
 2707940,FPV Kamikaze Drone,https://store.steampowered.com/app/2707940/,https://imho.run/games/2707940/fpv-kamikaze-drone?utm_source=github,online,2023,1k+
+2347080,Frosthaven,https://store.steampowered.com/app/2347080/,https://imho.run/games/2347080/frosthaven?utm_source=github,online,2026,1k+
 1134100,Frozenheim,https://store.steampowered.com/app/1134100/,https://imho.run/games/1134100/frozenheim?utm_source=github,online,2022,1k+
 3712080,Funnel Runners,https://store.steampowered.com/app/3712080/,https://imho.run/games/3712080/funnel-runners?utm_source=github,online,2026,1k+
 1331440,FUSER™,https://store.steampowered.com/app/1331440/,https://imho.run/games/1331440/fuser?utm_source=github,online,2020,1k+
@@ -1200,6 +1203,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 2681030,Outbound,https://store.steampowered.com/app/2681030/,https://imho.run/games/2681030/outbound?utm_source=github,online,2026,1k+
 1107320,OUTBRK,https://store.steampowered.com/app/1107320/,https://imho.run/games/1107320/outbrk?utm_source=github,online,2024,1k+
 1566690,Outpost: Infinity Siege,https://store.steampowered.com/app/1566690/,https://imho.run/games/1566690/outpost-infinity-siege?utm_source=github,online,2024,1k+
+2929250,over the hill,https://store.steampowered.com/app/2929250/,https://imho.run/games/2929250/over-the-hill?utm_source=github,online,2026,1k+
 2778610,Over The Top: WWI,https://store.steampowered.com/app/2778610/,https://imho.run/games/2778610/over-the-top-wwi?utm_source=github,online,2026,1k+
 2695940,PANICORE,https://store.steampowered.com/app/2695940/,https://imho.run/games/2695940/panicore?utm_source=github,online,2024,1k+
 3107230,Pantheon: Rise of the Fallen,https://store.steampowered.com/app/3107230/,https://imho.run/games/3107230/pantheon-rise-of-the-fallen?utm_source=github,online,2024,1k+
@@ -1210,6 +1214,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 1995520,Pax Dei,https://store.steampowered.com/app/1995520/,https://imho.run/games/1995520/pax-dei?utm_source=github,online,2025,1k+
 803050,Per Aspera,https://store.steampowered.com/app/803050/,https://imho.run/games/803050/per-aspera?utm_source=github,online,2020,1k+
 1521580,Perfect Heist 2,https://store.steampowered.com/app/1521580/,https://imho.run/games/1521580/perfect-heist-2?utm_source=github,online,2021,1k+
+2254990,Permafrost,https://store.steampowered.com/app/2254990/,https://imho.run/games/2254990/permafrost?utm_source=github,online,2026,1k+
 2385530,PGA TOUR 2K25,https://store.steampowered.com/app/2385530/,https://imho.run/games/2385530/pga-tour-2k25?utm_source=github,online,2025,1k+
 2965660,PILGRIM,https://store.steampowered.com/app/2965660/,https://imho.run/games/2965660/pilgrim?utm_source=github,online,2024,1k+
 2155180,Pioneers of Pagonia,https://store.steampowered.com/app/2155180/,https://imho.run/games/2155180/pioneers-of-pagonia?utm_source=github,online,2025,1k+
@@ -1238,6 +1243,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 1683150,Railroader,https://store.steampowered.com/app/1683150/,https://imho.run/games/1683150/railroader?utm_source=github,online,2023,1k+
 1696810,Railroads Online,https://store.steampowered.com/app/1696810/,https://imho.run/games/1696810/railroads-online?utm_source=github,online,2024,1k+
 1644320,Railway Empire 2,https://store.steampowered.com/app/1644320/,https://imho.run/games/1644320/railway-empire-2?utm_source=github,online,2023,1k+
+2949320,Ratatan,https://store.steampowered.com/app/2949320/,https://imho.run/games/2949320/ratatan?utm_source=github,online,2026,1k+
 436320,Raw Data,https://store.steampowered.com/app/436320/,https://imho.run/games/436320/raw-data?utm_source=github,online,2017,1k+
 1088790,Rebel Inc: Escalation,https://store.steampowered.com/app/1088790/,https://imho.run/games/1088790/rebel-inc-escalation?utm_source=github,online,2021,1k+
 55110,Red Faction®: Armageddon™,https://store.steampowered.com/app/55110/,https://imho.run/games/55110/red-faction-armageddon?utm_source=github,online,2011,1k+
@@ -1277,6 +1283,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 1060230,Sapiens,https://store.steampowered.com/app/1060230/,https://imho.run/games/1060230/sapiens?utm_source=github,online,2022,1k+
 268870,Satellite Reign,https://store.steampowered.com/app/268870/,https://imho.run/games/268870/satellite-reign?utm_source=github,online,2015,1k+
 307880,Savage Lands,https://store.steampowered.com/app/307880/,https://imho.run/games/307880/savage-lands?utm_source=github,online,2021,1k+
+4954910,Scam With Your Friends,https://store.steampowered.com/app/4954910/,https://imho.run/games/4954910/scam-with-your-friends?utm_source=github,online,2026,1k+
 1183940,Scavengers,https://store.steampowered.com/app/1183940/,https://imho.run/games/1183940/scavengers?utm_source=github,online,2021,1k+
 3257000,SCP: Containment Breach 2,https://store.steampowered.com/app/3257000/,https://imho.run/games/3257000/scp-containment-breach-2?utm_source=github,online,2025,1k+
 824550,SD GUNDAM BATTLE ALLIANCE,https://store.steampowered.com/app/824550/,https://imho.run/games/824550/sd-gundam-battle-alliance?utm_source=github,online,2022,1k+
@@ -1404,6 +1411,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 2379390,Tom Clancy’s Rainbow Six® Extraction,https://store.steampowered.com/app/2379390/,https://imho.run/games/2379390/tom-clancy-s-rainbow-six-extraction?utm_source=github,online,2023,1k+
 1827180,Toram Online,https://store.steampowered.com/app/1827180/,https://imho.run/games/1827180/toram-online?utm_source=github,online,2021,1k+
 1030210,Torchlight III,https://store.steampowered.com/app/1030210/,https://imho.run/games/1030210/torchlight-iii?utm_source=github,online,2020,1k+
+3846830,Total War: SHOGUN 2 - Complete Edition,https://store.steampowered.com/app/3846830/,https://imho.run/games/3846830/total-war-shogun-2-complete-edition?utm_source=github,online,2026,1k+
 324810,TOXIKK™,https://store.steampowered.com/app/324810/,https://imho.run/games/324810/toxikk?utm_source=github,online,2016,1k+
 553520,Trainz Railroad Simulator 2019,https://store.steampowered.com/app/553520/,https://imho.run/games/553520/trainz-railroad-simulator-2019?utm_source=github,online,2019,1k+
 315660,Trainz: A New Era,https://store.steampowered.com/app/315660/,https://imho.run/games/315660/trainz-a-new-era?utm_source=github,online,2015,1k+
@@ -1615,8 +1623,10 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 754530,IL-2 Sturmovik: Cliffs of Dover Blitz Edition,https://store.steampowered.com/app/754530/,https://imho.run/games/754530/il-2-sturmovik-cliffs-of-dover-blitz-edition?utm_source=github,online,2017,500+
 1858650,In Sink: A Co-op Escape Adventure,https://store.steampowered.com/app/1858650/,https://imho.run/games/1858650/in-sink-a-co-op-escape-adventure?utm_source=github,online,2024,500+
 363360,Interstellar Rift,https://store.steampowered.com/app/363360/,https://imho.run/games/363360/interstellar-rift?utm_source=github,online,2020,500+
+3883570,Invokyr,https://store.steampowered.com/app/3883570/,https://imho.run/games/3883570/invokyr?utm_source=github,online,2026,500+
 673560,IOSoccer,https://store.steampowered.com/app/673560/,https://imho.run/games/673560/iosoccer?utm_source=github,online,2018,500+
 115120,Iron Brigade,https://store.steampowered.com/app/115120/,https://imho.run/games/115120/iron-brigade?utm_source=github,online,2012,500+
+1191830,Iverian Wars: Craxion vs Defugel,https://store.steampowered.com/app/1191830/,https://imho.run/games/1191830/iverian-wars-craxion-vs-defugel?utm_source=github,online,2026,500+
 3710,Judge Dredd: Dredd vs. Death,https://store.steampowered.com/app/3710/,https://imho.run/games/3710/judge-dredd-dredd-vs-death?utm_source=github,online,2009,500+
 979070,Just Die Already,https://store.steampowered.com/app/979070/,https://imho.run/games/979070/just-die-already?utm_source=github,online,2021,500+
 611160,Karnage Chronicles,https://store.steampowered.com/app/611160/,https://imho.run/games/611160/karnage-chronicles?utm_source=github,online,2020,500+
@@ -1681,7 +1691,6 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 3058360,Parisian Bistro Simulator,https://store.steampowered.com/app/3058360/,https://imho.run/games/3058360/parisian-bistro-simulator?utm_source=github,online,2026,500+
 1048100,Peekaboo,https://store.steampowered.com/app/1048100/,https://imho.run/games/1048100/peekaboo?utm_source=github,online,2019,500+
 288140,Perfect Golf,https://store.steampowered.com/app/288140/,https://imho.run/games/288140/perfect-golf?utm_source=github,online,2016,500+
-2254990,Permafrost,https://store.steampowered.com/app/2254990/,https://imho.run/games/2254990/permafrost?utm_source=github,online,2026,500+
 385380,Planet Centauri,https://store.steampowered.com/app/385380/,https://imho.run/games/385380/planet-centauri?utm_source=github,online,2024,500+
 3198850,Play Together,https://store.steampowered.com/app/3198850/,https://imho.run/games/3198850/play-together?utm_source=github,online,2025,500+
 235340,Prime World,https://store.steampowered.com/app/235340/,https://imho.run/games/235340/prime-world?utm_source=github,online,2014,500+
@@ -1691,7 +1700,6 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 1682050,PropHunter,https://store.steampowered.com/app/1682050/,https://imho.run/games/1682050/prophunter?utm_source=github,online,2021,500+
 797400,Railroad Corporation,https://store.steampowered.com/app/797400/,https://imho.run/games/797400/railroad-corporation?utm_source=github,online,2019,500+
 1218740,Rakion Chaos Force,https://store.steampowered.com/app/1218740/,https://imho.run/games/1218740/rakion-chaos-force?utm_source=github,online,2020,500+
-2949320,Ratatan,https://store.steampowered.com/app/2949320/,https://imho.run/games/2949320/ratatan?utm_source=github,online,2025,500+
 823950,Re:Legend,https://store.steampowered.com/app/823950/,https://imho.run/games/823950/re-legend?utm_source=github,online,2022,500+
 547860,Rend,https://store.steampowered.com/app/547860/,https://imho.run/games/547860/rend?utm_source=github,online,2019,500+
 2870920,Restaurats,https://store.steampowered.com/app/2870920/,https://imho.run/games/2870920/restaurats?utm_source=github,online,2025,500+
@@ -1742,6 +1750,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 1341230,Super Buckyball Tournament Preseason,https://store.steampowered.com/app/1341230/,https://imho.run/games/1341230/super-buckyball-tournament-preseason?utm_source=github,online,2020,500+
 1770080,Superfuse,https://store.steampowered.com/app/1770080/,https://imho.run/games/1770080/superfuse?utm_source=github,online,2023,500+
 3454830,SurfsUp,https://store.steampowered.com/app/3454830/,https://imho.run/games/3454830/surfsup?utm_source=github,online,2025,500+
+1813170,Surrounded,https://store.steampowered.com/app/1813170/,https://imho.run/games/1813170/surrounded?utm_source=github,online,2026,500+
 1375740,Surviv.io - 2D Battle Royale,https://store.steampowered.com/app/1375740/,https://imho.run/games/1375740/surviv-io-2d-battle-royale?utm_source=github,online,2020,500+
 1858630,SWORD ART ONLINE Fractured Daydream,https://store.steampowered.com/app/1858630/,https://imho.run/games/1858630/sword-art-online-fractured-daydream?utm_source=github,online,2024,500+
 638650,Sword Art Online Re: Hollow Fragment,https://store.steampowered.com/app/638650/,https://imho.run/games/638650/sword-art-online-re-hollow-fragment?utm_source=github,online,2018,500+
@@ -1750,6 +1759,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 810040,Swords 'n Magic and Stuff,https://store.steampowered.com/app/810040/,https://imho.run/games/810040/swords-n-magic-and-stuff?utm_source=github,online,2020,500+
 833090,Swords of Gurrah,https://store.steampowered.com/app/833090/,https://imho.run/games/833090/swords-of-gurrah?utm_source=github,online,2020,500+
 587860,Tales of Escape,https://store.steampowered.com/app/587860/,https://imho.run/games/587860/tales-of-escape?utm_source=github,online,2017,500+
+5019920,Tasty Chef,https://store.steampowered.com/app/5019920/,https://imho.run/games/5019920/tasty-chef?utm_source=github,online,2026,500+
 418180,Tempest: Pirate Action RPG,https://store.steampowered.com/app/418180/,https://imho.run/games/418180/tempest-pirate-action-rpg?utm_source=github,online,2016,500+
 2290000,TerraScape,https://store.steampowered.com/app/2290000/,https://imho.run/games/2290000/terrascape?utm_source=github,online,2024,500+
 1120480,The Anacrusis,https://store.steampowered.com/app/1120480/,https://imho.run/games/1120480/the-anacrusis?utm_source=github,online,2023,500+
@@ -1793,6 +1803,7 @@ appid,name,steam_url,imho_url,mode,release_year,reviews_bucket
 2191500,Vampires: Bloodlord Rising,https://store.steampowered.com/app/2191500/,https://imho.run/games/2191500/vampires-bloodlord-rising?utm_source=github,online,2026,500+
 1608400,Vermillion - VR Painting,https://store.steampowered.com/app/1608400/,https://imho.run/games/1608400/vermillion-vr-painting?utm_source=github,online,2021,500+
 1264520,Vibrant Venture,https://store.steampowered.com/app/1264520/,https://imho.run/games/1264520/vibrant-venture?utm_source=github,online,2020,500+
+3071240,Voodoo Fishin',https://store.steampowered.com/app/3071240/,https://imho.run/games/3071240/voodoo-fishin?utm_source=github,online,2026,500+
 334540,Vox Machinae,https://store.steampowered.com/app/334540/,https://imho.run/games/334540/vox-machinae?utm_source=github,online,2022,500+
 4981570,Wand & Order: Tidy up the magic shop!,https://store.steampowered.com/app/4981570/,https://imho.run/games/4981570/wand-order-tidy-up-the-magic-shop?utm_source=github,online,2026,500+
 1101790,War Mongrels,https://store.steampowered.com/app/1101790/,https://imho.run/games/1101790/war-mongrels?utm_source=github,online,2021,500+

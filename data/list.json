@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-05",
+ "generated_at": "2026-10-19",
  "source": "https://imho.run",
  "license": "https://creativecommons.org/licenses/by/4.0/",
  "attribution": "imho.run (https://imho.run)",
@@ -17,8 +17,8 @@
     2918310,
     3904850,
     3583210,
-    4380490,
-    3683770
+    2929250,
+    4380490
    ],
    "games": [
     {
@@ -94,6 +94,15 @@
      "description": "Driving, Arcade, Character Customization"
     },
     {
+     "appid": 2929250,
+     "name": "over the hill",
+     "imho_url": "https://imho.run/games/2929250/over-the-hill?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/2929250/",
+     "year": 2026,
+     "mode": "online",
+     "description": "Driving, Racing, Offroad"
+    },
+    {
      "appid": 4380490,
      "name": "Cat Mail Co.",
      "imho_url": "https://imho.run/games/4380490/cat-mail-co?utm_source=github",
@@ -101,15 +110,6 @@
      "year": 2026,
      "mode": "online",
      "description": "Cozy cat post office sorting and delivery simulation"
-    },
-    {
-     "appid": 3683770,
-     "name": "Boba Cafe Simulator",
-     "imho_url": "https://imho.run/games/3683770/boba-cafe-simulator?utm_source=github",
-     "steam_url": "https://store.steampowered.com/app/3683770/",
-     "year": 2026,
-     "mode": "online",
-     "description": "Cafe management sim with drink-making and NPC friendships"
     }
    ]
   },
@@ -541,8 +541,8 @@
     1016920,
     448510,
     375480,
-    230270,
-    523660
+    440310,
+    230270
    ],
    "games": [
     {
@@ -618,6 +618,15 @@
      "description": "Pixel-art ARPG with endless endgame and deep build variety"
     },
     {
+     "appid": 440310,
+     "name": "Afterbeat (Project Arrhythmia)",
+     "imho_url": "https://imho.run/games/440310/afterbeat-project-arrhythmia?utm_source=github",
+     "steam_url": "https://store.steampowered.com/app/440310/",
+     "year": 2026,
+     "mode": "local",
+     "description": "Rhythm-based bullet hell with advanced level editor"
+    },
+    {
      "appid": 230270,
      "name": "N++ (NPLUSPLUS)",
      "imho_url": "https://imho.run/games/230270/n-nplusplus?utm_source=github",
@@ -625,15 +634,6 @@
      "year": 2016,
      "mode": "local",
      "description": "Hard precision platformer with thousands of levels"
-    },
-    {
-     "appid": 523660,
-     "name": "HYPERCHARGE: Unboxed",
-     "imho_url": "https://imho.run/games/523660/hypercharge-unboxed?utm_source=github",
-     "steam_url": "https://store.steampowered.com/app/523660/",
-     "year": 2020,
-     "mode": "online+local",
-     "description": "Tower defense FPS with toy soldier heroes in a living bedroom"
     }
    ]
   },

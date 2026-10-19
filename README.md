@@ -33,8 +33,8 @@ _Top 10 co-op games released in 2026 by Wilson lower bound; 500+ reviews, 85%+ p
 - **[Mama's Sleeping Angels](https://store.steampowered.com/app/2918310/)** (2026) · online — Co-op extraction horror with kissing healing and cursed artifacts · [similar games](https://imho.run/games/2918310/mama-s-sleeping-angels?utm_source=github)
 - **[Approximately Up](https://store.steampowered.com/app/3904850/)** (2026) · online — Build and fly custom spacecraft across a solar system · [similar games](https://imho.run/games/3904850/approximately-up?utm_source=github)
 - **[Crashout Crew](https://store.steampowered.com/app/3583210/)** (2026) · online — Driving, Arcade, Character Customization · [similar games](https://imho.run/games/3583210/crashout-crew?utm_source=github)
+- **[over the hill](https://store.steampowered.com/app/2929250/)** (2026) · online — Driving, Racing, Offroad · [similar games](https://imho.run/games/2929250/over-the-hill?utm_source=github)
 - **[Cat Mail Co.](https://store.steampowered.com/app/4380490/)** (2026) · online — Cozy cat post office sorting and delivery simulation · [similar games](https://imho.run/games/4380490/cat-mail-co?utm_source=github)
-- **[Boba Cafe Simulator](https://store.steampowered.com/app/3683770/)** (2026) · online — Cafe management sim with drink-making and NPC friendships · [similar games](https://imho.run/games/3683770/boba-cafe-simulator?utm_source=github)
 
 New co-op releases from the last 60 days: [RSS feed](https://imho.run/feeds/en/new-coop-games.xml) · [list on imho.run](https://imho.run/discover/new-releases-coop?utm_source=github)
 
@@ -100,8 +100,8 @@ _Same ranking; games with couch co-op for 4 players._ [Full list](https://imho.r
 - **[Unrailed!](https://store.steampowered.com/app/1016920/)** (2020) · online+local — Co-op train-building chaos, keep the locomotive moving · [similar games](https://imho.run/games/1016920/unrailed?utm_source=github)
 - **[Overcooked](https://store.steampowered.com/app/448510/)** (2016) · local — Local co-op cooking chaos, teamwork required · [similar games](https://imho.run/games/448510/overcooked?utm_source=github)
 - **[Chronicon](https://store.steampowered.com/app/375480/)** (2020) · local — Pixel-art ARPG with endless endgame and deep build variety · [similar games](https://imho.run/games/375480/chronicon?utm_source=github)
+- **[Afterbeat (Project Arrhythmia)](https://store.steampowered.com/app/440310/)** (2026) · local — Rhythm-based bullet hell with advanced level editor · [similar games](https://imho.run/games/440310/afterbeat-project-arrhythmia?utm_source=github)
 - **[N++ (NPLUSPLUS)](https://store.steampowered.com/app/230270/)** (2016) · local — Hard precision platformer with thousands of levels · [similar games](https://imho.run/games/230270/n-nplusplus?utm_source=github)
-- **[HYPERCHARGE: Unboxed](https://store.steampowered.com/app/523660/)** (2020) · online+local — Tower defense FPS with toy soldier heroes in a living bedroom · [similar games](https://imho.run/games/523660/hypercharge-unboxed?utm_source=github)
 
 ## Co-op horror
 
@@ -167,4 +167,4 @@ Found a wrong co-op mode, a misleading description or a missing classic? Open an
 
 The list (names, rankings, classifications and descriptions) is published under [CC BY 4.0](LICENSE-DATA): credit imho.run (https://imho.run) when you reuse it. The generator code is [MIT](LICENSE). Game names are their owners' trademarks; Steam is a trademark of Valve Corporation. This project is not affiliated with Valve or with any game's developer or publisher.
 
-_Last generated: 2026-10-05._
+_Last generated: 2026-10-19._
