@@ -1,6 +1,6 @@
 # All co-op games on Steam with 500+ reviews
 
-2069 games: every Steam game with genuine co-op and 500+ reviews in imho.run's data. The hand-picked short list is in the [README](README.md).
+2075 games: every Steam game with genuine co-op and 500+ reviews in imho.run's data. The hand-picked short list is in the [README](README.md).
 
 - **Why 500+ reviews:** Steam has thousands of small co-op releases that few people have played. The floor keeps this list to games with enough players behind them to judge.
 - **Mode:** online, local or online + local, classified by imho.run from each game's Steam co-op categories and community tags; competitive multiplayer alone does not count and LAN-only games are left out ([classification rules](https://imho.run/datasets/steam-coop-games-by-mode?utm_source=github)).
@@ -9,17 +9,17 @@
 - The same rows as data: [CSV](data/all-coop-games.csv) · [JSON](data/all-coop-games.json).
 - **No review floor:** every co-op game imho.run classifies, as [CSV](data/all-coop-games-no-floor.csv) · [JSON](data/all-coop-games-no-floor.json) only, too long for a table here ([dataset page](https://imho.run/datasets/steam-coop-games-all?utm_source=github)).
 - **License:** [CC BY 4.0](LICENSE-DATA); credit imho.run (https://imho.run) when you reuse it. Game names are their owners' trademarks. Not affiliated with Valve.
-- Regenerated weekly from imho.run's [public dataset](https://imho.run/datasets/steam-coop-games-by-mode?utm_source=github) by [`generate.py`](generate.py). Last generated: 2026-10-19.
+- Regenerated weekly from imho.run's [public dataset](https://imho.run/datasets/steam-coop-games-by-mode?utm_source=github) by [`generate.py`](generate.py). Last generated: 2026-10-26.
 
 ## Contents
 
-- [Online and local co-op](#online-and-local-co-op) (289)
-- [Online co-op only](#online-co-op-only) (1534)
+- [Online and local co-op](#online-and-local-co-op) (290)
+- [Online co-op only](#online-co-op-only) (1539)
 - [Local co-op only](#local-co-op-only) (246)
 
 ## Online and local co-op
 
-289 games, by review bucket (highest first), then by name.
+290 games, by review bucket (highest first), then by name.
 
 | Game | Year | Mode | Reviews | Similar |
 | --- | --- | --- | --- | --- |
@@ -247,6 +247,7 @@
 | [Antonball Deluxe](https://store.steampowered.com/app/1382320/) | 2021 | online + local | 500+ | [similar](https://imho.run/games/1382320/antonball-deluxe?utm_source=github) |
 | [Blightbound](https://store.steampowered.com/app/1263070/) | 2021 | online + local | 500+ | [similar](https://imho.run/games/1263070/blightbound?utm_source=github) |
 | [Carry The Glass](https://store.steampowered.com/app/3263320/) | 2024 | online + local | 500+ | [similar](https://imho.run/games/3263320/carry-the-glass?utm_source=github) |
+| [Chained Beasts](https://store.steampowered.com/app/3569420/) | 2026 | online + local | 500+ | [similar](https://imho.run/games/3569420/chained-beasts?utm_source=github) |
 | [Commandos: Origins](https://store.steampowered.com/app/1479730/) | 2025 | online + local | 500+ | [similar](https://imho.run/games/1479730/commandos-origins?utm_source=github) |
 | [Cricket 26 - The Official Game of the Ashes](https://store.steampowered.com/app/3468650/) | 2025 | online + local | 500+ | [similar](https://imho.run/games/3468650/cricket-26-the-official-game-of-the-ashes?utm_source=github) |
 | [Double Dragon Gaiden: Rise Of The Dragons](https://store.steampowered.com/app/1967260/) | 2023 | online + local | 500+ | [similar](https://imho.run/games/1967260/double-dragon-gaiden-rise-of-the-dragons?utm_source=github) |
@@ -315,7 +316,7 @@
 
 ## Online co-op only
 
-1534 games, by review bucket (highest first), then by name.
+1539 games, by review bucket (highest first), then by name.
 
 | Game | Year | Mode | Reviews | Similar |
 | --- | --- | --- | --- | --- |
@@ -1091,7 +1092,7 @@
 | [Gloria Victis: Medieval MMORPG](https://store.steampowered.com/app/327070/) | 2023 | online | 1k+ | [similar](https://imho.run/games/327070/gloria-victis-medieval-mmorpg?utm_source=github) |
 | [GOD EATER 2 Rage Burst](https://store.steampowered.com/app/438490/) | 2016 | online | 1k+ | [similar](https://imho.run/games/438490/god-eater-2-rage-burst?utm_source=github) |
 | [GOD EATER 3](https://store.steampowered.com/app/899440/) | 2019 | online | 1k+ | [similar](https://imho.run/games/899440/god-eater-3?utm_source=github) |
-| [GONE Fishing](https://store.steampowered.com/app/3645890/) | 2025 | online | 1k+ | [similar](https://imho.run/games/3645890/gone-fishing?utm_source=github) |
+| [GONE Fishing](https://store.steampowered.com/app/3645890/) | 2026 | online | 1k+ | [similar](https://imho.run/games/3645890/gone-fishing?utm_source=github) |
 | [GRAIN ROT](https://store.steampowered.com/app/4450620/) | 2026 | online | 1k+ | [similar](https://imho.run/games/4450620/grain-rot?utm_source=github) |
 | [GRAV](https://store.steampowered.com/app/332500/) | 2015 | online | 1k+ | [similar](https://imho.run/games/332500/grav?utm_source=github) |
 | [Greed of Man](https://store.steampowered.com/app/2336720/) | 2023 | online | 1k+ | [similar](https://imho.run/games/2336720/greed-of-man?utm_source=github) |
@@ -1138,6 +1139,7 @@
 | [Into The Flames](https://store.steampowered.com/app/1222300/) | 2023 | online | 1k+ | [similar](https://imho.run/games/1222300/into-the-flames?utm_source=github) |
 | [Into the Radius 2](https://store.steampowered.com/app/2307350/) | 2026 | online | 1k+ | [similar](https://imho.run/games/2307350/into-the-radius-2?utm_source=github) |
 | [Intralism](https://store.steampowered.com/app/513510/) | 2016 | online | 1k+ | [similar](https://imho.run/games/513510/intralism?utm_source=github) |
+| [Invokyr](https://store.steampowered.com/app/3883570/) | 2026 | online | 1k+ | [similar](https://imho.run/games/3883570/invokyr?utm_source=github) |
 | [Istrolid](https://store.steampowered.com/app/449140/) | 2016 | online | 1k+ | [similar](https://imho.run/games/449140/istrolid?utm_source=github) |
 | [Jet Island](https://store.steampowered.com/app/587220/) | 2018 | online | 1k+ | [similar](https://imho.run/games/587220/jet-island?utm_source=github) |
 | [Jigsaw Puzzle Dreams](https://store.steampowered.com/app/1653970/) | 2021 | online | 1k+ | [similar](https://imho.run/games/1653970/jigsaw-puzzle-dreams?utm_source=github) |
@@ -1199,7 +1201,7 @@
 | [MIR4](https://store.steampowered.com/app/1623660/) | 2021 | online | 1k+ | [similar](https://imho.run/games/1623660/mir4?utm_source=github) |
 | [Monster Hunter Stories 2: Wings of Ruin](https://store.steampowered.com/app/1277400/) | 2021 | online | 1k+ | [similar](https://imho.run/games/1277400/monster-hunter-stories-2-wings-of-ruin?utm_source=github) |
 | [Murky Divers](https://store.steampowered.com/app/2963880/) | 2024 | online | 1k+ | [similar](https://imho.run/games/2963880/murky-divers?utm_source=github) |
-| [Mycopunk](https://store.steampowered.com/app/3247750/) | 2025 | online | 1k+ | [similar](https://imho.run/games/3247750/mycopunk?utm_source=github) |
+| [Mycopunk](https://store.steampowered.com/app/3247750/) | 2026 | online | 1k+ | [similar](https://imho.run/games/3247750/mycopunk?utm_source=github) |
 | [Myth of Empires](https://store.steampowered.com/app/1371580/) | 2024 | online | 1k+ | [similar](https://imho.run/games/1371580/myth-of-empires?utm_source=github) |
 | [NEBULOUS: Fleet Command](https://store.steampowered.com/app/887570/) | 2022 | online | 1k+ | [similar](https://imho.run/games/887570/nebulous-fleet-command?utm_source=github) |
 | [Necromunda: Underhive Wars](https://store.steampowered.com/app/566440/) | 2020 | online | 1k+ | [similar](https://imho.run/games/566440/necromunda-underhive-wars?utm_source=github) |
@@ -1578,6 +1580,7 @@
 | [Deadswitch 3](https://store.steampowered.com/app/1131080/) | 2021 | online | 500+ | [similar](https://imho.run/games/1131080/deadswitch-3?utm_source=github) |
 | [DEATH IN UNISON](https://store.steampowered.com/app/2454890/) | 2024 | online | 500+ | [similar](https://imho.run/games/2454890/death-in-unison?utm_source=github) |
 | [Deathground](https://store.steampowered.com/app/1200770/) | 2025 | online | 500+ | [similar](https://imho.run/games/1200770/deathground?utm_source=github) |
+| [Deep Dish Dungeon](https://store.steampowered.com/app/2871520/) | 2026 | online | 500+ | [similar](https://imho.run/games/2871520/deep-dish-dungeon?utm_source=github) |
 | [Delivery & Beyond](https://store.steampowered.com/app/3376480/) | 2026 | online | 500+ | [similar](https://imho.run/games/3376480/delivery-beyond?utm_source=github) |
 | [Demeo x Dungeons & Dragons: Battlemarked](https://store.steampowered.com/app/3124340/) | 2025 | online | 500+ | [similar](https://imho.run/games/3124340/demeo-x-dungeons-dragons-battlemarked?utm_source=github) |
 | [Demigod](https://store.steampowered.com/app/202710/) | 2011 | online | 500+ | [similar](https://imho.run/games/202710/demigod?utm_source=github) |
@@ -1607,6 +1610,7 @@
 | [EDEN STAR](https://store.steampowered.com/app/259570/) | 2015 | online | 500+ | [similar](https://imho.run/games/259570/eden-star?utm_source=github) |
 | [Embr](https://store.steampowered.com/app/1062830/) | 2021 | online | 500+ | [similar](https://imho.run/games/1062830/embr?utm_source=github) |
 | [Escape First Alchemist ⚗️](https://store.steampowered.com/app/2094320/) | 2023 | online | 500+ | [similar](https://imho.run/games/2094320/escape-first-alchemist?utm_source=github) |
+| [Escape from Playtime](https://store.steampowered.com/app/2087540/) | 2026 | online | 500+ | [similar](https://imho.run/games/2087540/escape-from-playtime?utm_source=github) |
 | [EverSiege: Untold Ages](https://store.steampowered.com/app/3363680/) | 2026 | online | 500+ | [similar](https://imho.run/games/3363680/eversiege-untold-ages?utm_source=github) |
 | [Evil Dead: The Game](https://store.steampowered.com/app/1493750/) | 2023 | online | 500+ | [similar](https://imho.run/games/1493750/evil-dead-the-game?utm_source=github) |
 | [Fade to Silence](https://store.steampowered.com/app/706020/) | 2019 | online | 500+ | [similar](https://imho.run/games/706020/fade-to-silence?utm_source=github) |
@@ -1654,10 +1658,10 @@
 | [IL-2 Sturmovik: Cliffs of Dover Blitz Edition](https://store.steampowered.com/app/754530/) | 2017 | online | 500+ | [similar](https://imho.run/games/754530/il-2-sturmovik-cliffs-of-dover-blitz-edition?utm_source=github) |
 | [In Sink: A Co-op Escape Adventure](https://store.steampowered.com/app/1858650/) | 2024 | online | 500+ | [similar](https://imho.run/games/1858650/in-sink-a-co-op-escape-adventure?utm_source=github) |
 | [Interstellar Rift](https://store.steampowered.com/app/363360/) | 2020 | online | 500+ | [similar](https://imho.run/games/363360/interstellar-rift?utm_source=github) |
-| [Invokyr](https://store.steampowered.com/app/3883570/) | 2026 | online | 500+ | [similar](https://imho.run/games/3883570/invokyr?utm_source=github) |
 | [IOSoccer](https://store.steampowered.com/app/673560/) | 2018 | online | 500+ | [similar](https://imho.run/games/673560/iosoccer?utm_source=github) |
 | [Iron Brigade](https://store.steampowered.com/app/115120/) | 2012 | online | 500+ | [similar](https://imho.run/games/115120/iron-brigade?utm_source=github) |
 | [Iverian Wars: Craxion vs Defugel](https://store.steampowered.com/app/1191830/) | 2026 | online | 500+ | [similar](https://imho.run/games/1191830/iverian-wars-craxion-vs-defugel?utm_source=github) |
+| [Japanese Ramen Simulator](https://store.steampowered.com/app/4968640/) | 2026 | online | 500+ | [similar](https://imho.run/games/4968640/japanese-ramen-simulator?utm_source=github) |
 | [Judge Dredd: Dredd vs. Death](https://store.steampowered.com/app/3710/) | 2009 | online | 500+ | [similar](https://imho.run/games/3710/judge-dredd-dredd-vs-death?utm_source=github) |
 | [Just Die Already](https://store.steampowered.com/app/979070/) | 2021 | online | 500+ | [similar](https://imho.run/games/979070/just-die-already?utm_source=github) |
 | [Karnage Chronicles](https://store.steampowered.com/app/611160/) | 2020 | online | 500+ | [similar](https://imho.run/games/611160/karnage-chronicles?utm_source=github) |
@@ -1703,6 +1707,7 @@
 | [Nin Online](https://store.steampowered.com/app/1674010/) | 2025 | online | 500+ | [similar](https://imho.run/games/1674010/nin-online?utm_source=github) |
 | [NITE Team 4 - Military Hacking Division](https://store.steampowered.com/app/544390/) | 2019 | online | 500+ | [similar](https://imho.run/games/544390/nite-team-4-military-hacking-division?utm_source=github) |
 | [NO BACKUP](https://store.steampowered.com/app/3894440/) | 2026 | online | 500+ | [similar](https://imho.run/games/3894440/no-backup?utm_source=github) |
+| [No Such Place](https://store.steampowered.com/app/3299050/) | 2026 | online | 500+ | [similar](https://imho.run/games/3299050/no-such-place?utm_source=github) |
 | [NosTale - Anime MMORPG](https://store.steampowered.com/app/550470/) | 2017 | online | 500+ | [similar](https://imho.run/games/550470/nostale-anime-mmorpg?utm_source=github) |
 | [Nostos](https://store.steampowered.com/app/943150/) | 2019 | online | 500+ | [similar](https://imho.run/games/943150/nostos?utm_source=github) |
 | [Obama Boss Fight](https://store.steampowered.com/app/1762270/) | 2021 | online | 500+ | [similar](https://imho.run/games/1762270/obama-boss-fight?utm_source=github) |
@@ -1822,6 +1827,7 @@
 | [Towers of Aghasba](https://store.steampowered.com/app/2178070/) | 2024 | online | 500+ | [similar](https://imho.run/games/2178070/towers-of-aghasba?utm_source=github) |
 | [Trainz Railroad Simulator 2022](https://store.steampowered.com/app/1784570/) | 2022 | online | 500+ | [similar](https://imho.run/games/1784570/trainz-railroad-simulator-2022?utm_source=github) |
 | [Traitors in Salem](https://store.steampowered.com/app/1497640/) | 2022 | online | 500+ | [similar](https://imho.run/games/1497640/traitors-in-salem?utm_source=github) |
+| [Trash Day](https://store.steampowered.com/app/3314580/) | 2026 | online | 500+ | [similar](https://imho.run/games/3314580/trash-day?utm_source=github) |
 | [Tree Simulator 2022](https://store.steampowered.com/app/1591290/) | 2021 | online | 500+ | [similar](https://imho.run/games/1591290/tree-simulator-2022?utm_source=github) |
 | [Truck & Logistics Simulator](https://store.steampowered.com/app/873840/) | 2023 | online | 500+ | [similar](https://imho.run/games/873840/truck-logistics-simulator?utm_source=github) |
 | [TUG](https://store.steampowered.com/app/277930/) | 2014 | online | 500+ | [similar](https://imho.run/games/277930/tug?utm_source=github) |
@@ -1978,7 +1984,7 @@
 | [Sunderfolk](https://store.steampowered.com/app/2414270/) | 2025 | local | 1k+ | [similar](https://imho.run/games/2414270/sunderfolk?utm_source=github) |
 | [Tales of Symphonia](https://store.steampowered.com/app/372360/) | 2016 | local | 1k+ | [similar](https://imho.run/games/372360/tales-of-symphonia?utm_source=github) |
 | [Tales of Vesperia: Definitive Edition](https://store.steampowered.com/app/738540/) | 2019 | local | 1k+ | [similar](https://imho.run/games/738540/tales-of-vesperia-definitive-edition?utm_source=github) |
-| [Tape to Tape](https://store.steampowered.com/app/1566200/) | 2023 | local | 1k+ | [similar](https://imho.run/games/1566200/tape-to-tape?utm_source=github) |
+| [Tape to Tape](https://store.steampowered.com/app/1566200/) | 2026 | local | 1k+ | [similar](https://imho.run/games/1566200/tape-to-tape?utm_source=github) |
 | [The Casting of Frank Stone™](https://store.steampowered.com/app/2223840/) | 2024 | local | 1k+ | [similar](https://imho.run/games/2223840/the-casting-of-frank-stone?utm_source=github) |
 | [THE HOUSE OF THE DEAD: Remake](https://store.steampowered.com/app/1694600/) | 2022 | local | 1k+ | [similar](https://imho.run/games/1694600/the-house-of-the-dead-remake?utm_source=github) |
 | [The Jackbox Party Pack](https://store.steampowered.com/app/331670/) | 2014 | local | 1k+ | [similar](https://imho.run/games/331670/the-jackbox-party-pack?utm_source=github) |
