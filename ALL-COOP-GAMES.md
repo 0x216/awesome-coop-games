@@ -1,6 +1,6 @@
 # All co-op games on Steam with 500+ reviews
 
-2075 games: every Steam game with genuine co-op and 500+ reviews in imho.run's data. The hand-picked short list is in the [README](README.md).
+2077 games: every Steam game with genuine co-op and 500+ reviews in imho.run's data. The hand-picked short list is in the [README](README.md).
 
 - **Why 500+ reviews:** Steam has thousands of small co-op releases that few people have played. The floor keeps this list to games with enough players behind them to judge.
 - **Mode:** online, local or online + local, classified by imho.run from each game's Steam co-op categories and community tags; competitive multiplayer alone does not count and LAN-only games are left out ([classification rules](https://imho.run/datasets/steam-coop-games-by-mode?utm_source=github)).
@@ -9,13 +9,13 @@
 - The same rows as data: [CSV](data/all-coop-games.csv) · [JSON](data/all-coop-games.json).
 - **No review floor:** every co-op game imho.run classifies, as [CSV](data/all-coop-games-no-floor.csv) · [JSON](data/all-coop-games-no-floor.json) only, too long for a table here ([dataset page](https://imho.run/datasets/steam-coop-games-all?utm_source=github)).
 - **License:** [CC BY 4.0](LICENSE-DATA); credit imho.run (https://imho.run) when you reuse it. Game names are their owners' trademarks. Not affiliated with Valve.
-- Regenerated weekly from imho.run's [public dataset](https://imho.run/datasets/steam-coop-games-by-mode?utm_source=github) by [`generate.py`](generate.py). Last generated: 2026-10-26.
+- Regenerated weekly from imho.run's [public dataset](https://imho.run/datasets/steam-coop-games-by-mode?utm_source=github) by [`generate.py`](generate.py). Last generated: 2026-11-09.
 
 ## Contents
 
 - [Online and local co-op](#online-and-local-co-op) (290)
-- [Online co-op only](#online-co-op-only) (1539)
-- [Local co-op only](#local-co-op-only) (246)
+- [Online co-op only](#online-co-op-only) (1540)
+- [Local co-op only](#local-co-op-only) (247)
 
 ## Online and local co-op
 
@@ -316,7 +316,7 @@
 
 ## Online co-op only
 
-1539 games, by review bucket (highest first), then by name.
+1540 games, by review bucket (highest first), then by name.
 
 | Game | Year | Mode | Reviews | Similar |
 | --- | --- | --- | --- | --- |
@@ -1167,7 +1167,7 @@
 | [Len's Island](https://store.steampowered.com/app/1335830/) | 2025 | online | 1k+ | [similar](https://imho.run/games/1335830/len-s-island?utm_source=github) |
 | [Level Zero: Extraction](https://store.steampowered.com/app/1456940/) | 2025 | online | 1k+ | [similar](https://imho.run/games/1456940/level-zero-extraction?utm_source=github) |
 | [Life is Feudal: Your Own](https://store.steampowered.com/app/290080/) | 2015 | online | 1k+ | [similar](https://imho.run/games/290080/life-is-feudal-your-own?utm_source=github) |
-| [Lightyear Frontier](https://store.steampowered.com/app/1677110/) | 2024 | online | 1k+ | [similar](https://imho.run/games/1677110/lightyear-frontier?utm_source=github) |
+| [Lightyear Frontier](https://store.steampowered.com/app/1677110/) | 2026 | online | 1k+ | [similar](https://imho.run/games/1677110/lightyear-frontier?utm_source=github) |
 | [Line of Sight](https://store.steampowered.com/app/436520/) | 2017 | online | 1k+ | [similar](https://imho.run/games/436520/line-of-sight?utm_source=github) |
 | [Little Goody Two Shoes](https://store.steampowered.com/app/1812370/) | 2023 | online | 1k+ | [similar](https://imho.run/games/1812370/little-goody-two-shoes?utm_source=github) |
 | [Little Nightmares III](https://store.steampowered.com/app/1392860/) | 2025 | online | 1k+ | [similar](https://imho.run/games/1392860/little-nightmares-iii?utm_source=github) |
@@ -1334,7 +1334,7 @@
 | [Shroud of the Avatar: Forsaken Virtues](https://store.steampowered.com/app/326160/) | 2018 | online | 1k+ | [similar](https://imho.run/games/326160/shroud-of-the-avatar-forsaken-virtues?utm_source=github) |
 | [Silent Hunter 5®: Battle of the Atlantic](https://store.steampowered.com/app/48110/) | 2010 | online | 1k+ | [similar](https://imho.run/games/48110/silent-hunter-5-battle-of-the-atlantic?utm_source=github) |
 | [Silent Hunter® III](https://store.steampowered.com/app/15210/) | 2008 | online | 1k+ | [similar](https://imho.run/games/15210/silent-hunter-iii?utm_source=github) |
-| [Silica](https://store.steampowered.com/app/1494420/) | 2023 | online | 1k+ | [similar](https://imho.run/games/1494420/silica?utm_source=github) |
+| [Silica](https://store.steampowered.com/app/1494420/) | 2026 | online | 1k+ | [similar](https://imho.run/games/1494420/silica?utm_source=github) |
 | [Sins of a Solar Empire II](https://store.steampowered.com/app/1575940/) | 2024 | online | 1k+ | [similar](https://imho.run/games/1575940/sins-of-a-solar-empire-ii?utm_source=github) |
 | [Sker Ritual](https://store.steampowered.com/app/1492070/) | 2024 | online | 1k+ | [similar](https://imho.run/games/1492070/sker-ritual?utm_source=github) |
 | [Sketchy's Contract](https://store.steampowered.com/app/2823080/) | 2026 | online | 1k+ | [similar](https://imho.run/games/2823080/sketchy-s-contract?utm_source=github) |
@@ -1600,7 +1600,7 @@
 | [Duel Corp.](https://store.steampowered.com/app/1804470/) | 2026 | online | 500+ | [similar](https://imho.run/games/1804470/duel-corp?utm_source=github) |
 | [Duet Night Abyss](https://store.steampowered.com/app/3950020/) | 2026 | online | 500+ | [similar](https://imho.run/games/3950020/duet-night-abyss?utm_source=github) |
 | [Dungeon Brawls](https://store.steampowered.com/app/4246640/) | 2026 | online | 500+ | [similar](https://imho.run/games/4246640/dungeon-brawls?utm_source=github) |
-| [Dungeon Rampage](https://store.steampowered.com/app/3053950/) | 2025 | online | 500+ | [similar](https://imho.run/games/3053950/dungeon-rampage?utm_source=github) |
+| [Dungeon Rampage Remastered](https://store.steampowered.com/app/3053950/) | 2026 | online | 500+ | [similar](https://imho.run/games/3053950/dungeon-rampage-remastered?utm_source=github) |
 | [Dungeons & Dragons Neverwinter Nights 2: Enhanced Edition](https://store.steampowered.com/app/2738630/) | 2025 | online | 500+ | [similar](https://imho.run/games/2738630/dungeons-dragons-neverwinter-nights-2-enhanced-edition?utm_source=github) |
 | [Dungeons of Eternity](https://store.steampowered.com/app/3189340/) | 2025 | online | 500+ | [similar](https://imho.run/games/3189340/dungeons-of-eternity?utm_source=github) |
 | [Earth Defense Force: Insect Armageddon](https://store.steampowered.com/app/23530/) | 2011 | online | 500+ | [similar](https://imho.run/games/23530/earth-defense-force-insect-armageddon?utm_source=github) |
@@ -1857,12 +1857,13 @@
 | [Wrap House Simulator🌯](https://store.steampowered.com/app/3533100/) | 2025 | online | 500+ | [similar](https://imho.run/games/3533100/wrap-house-simulator?utm_source=github) |
 | [WRC 10 FIA World Rally Championship](https://store.steampowered.com/app/1462810/) | 2021 | online | 500+ | [similar](https://imho.run/games/1462810/wrc-10-fia-world-rally-championship?utm_source=github) |
 | [Your Mother](https://store.steampowered.com/app/3399950/) | 2025 | online | 500+ | [similar](https://imho.run/games/3399950/your-mother?utm_source=github) |
+| [ZED ZONE](https://store.steampowered.com/app/1211600/) | 2026 | online | 500+ | [similar](https://imho.run/games/1211600/zed-zone?utm_source=github) |
 | [ZeroSpace](https://store.steampowered.com/app/1605850/) | 2026 | online | 500+ | [similar](https://imho.run/games/1605850/zerospace?utm_source=github) |
 | [新世界：暗影成双](https://store.steampowered.com/app/3319700/) | 2026 | online | 500+ | [similar](https://imho.run/games/3319700/game?utm_source=github) |
 
 ## Local co-op only
 
-246 games, by review bucket (highest first), then by name.
+247 games, by review bucket (highest first), then by name.
 
 | Game | Year | Mode | Reviews | Similar |
 | --- | --- | --- | --- | --- |
@@ -2038,6 +2039,7 @@
 | [Colt Canyon](https://store.steampowered.com/app/940710/) | 2020 | local | 500+ | [similar](https://imho.run/games/940710/colt-canyon?utm_source=github) |
 | [Crimsonland](https://store.steampowered.com/app/262830/) | 2014 | local | 500+ | [similar](https://imho.run/games/262830/crimsonland?utm_source=github) |
 | [CRYPTARK](https://store.steampowered.com/app/344740/) | 2017 | local | 500+ | [similar](https://imho.run/games/344740/cryptark?utm_source=github) |
+| [Deadly Days: Roadtrip](https://store.steampowered.com/app/3026450/) | 2026 | local | 500+ | [similar](https://imho.run/games/3026450/deadly-days-roadtrip?utm_source=github) |
 | [Diner Bros](https://store.steampowered.com/app/846800/) | 2018 | local | 500+ | [similar](https://imho.run/games/846800/diner-bros?utm_source=github) |
 | [Dungeon Souls](https://store.steampowered.com/app/383230/) | 2016 | local | 500+ | [similar](https://imho.run/games/383230/dungeon-souls?utm_source=github) |
 | [DYNASTY WARRIORS 7: Xtreme Legends Definitive Edition](https://store.steampowered.com/app/968790/) | 2018 | local | 500+ | [similar](https://imho.run/games/968790/dynasty-warriors-7-xtreme-legends-definitive-edition?utm_source=github) |
